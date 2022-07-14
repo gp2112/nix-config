@@ -15,19 +15,15 @@
 
  
   
-  
+ 
 
-  networking.hostName = "slowdive"; # Define your hostname.
-  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  
-  # The global useDHCP flag is deprecated, therefore explicitly set to false here.
-  # Per-interface useDHCP will be mandatory in the future, so this generated config
-  # replicates the default behaviour.
-  networking.useDHCP = false;
-  # networking.interfaces.enp1s0.useDHCP = true;
-
-
+  networking = {
+    hostName = "slowdive"; # Define your hostname.
+    wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+    useDHCP = true;
+    networkmanager.enable = true;
+  };
+ 
   # programs.hyprland.enable = true;
   
   # Enable sound.
@@ -58,6 +54,7 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     firefox
+    git
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
