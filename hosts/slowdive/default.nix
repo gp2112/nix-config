@@ -56,7 +56,7 @@
     git
     kitty
     swaybg
-    swaybar
+    waybar
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
