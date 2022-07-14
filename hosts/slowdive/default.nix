@@ -19,8 +19,6 @@
 
   networking = {
     hostName = "slowdive"; # Define your hostname.
-    wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-    useDHCP = true;
     networkmanager.enable = true;
   };
  
@@ -28,7 +26,7 @@
   
   # Enable sound.
   sound.enable = true;
-  service.pipewire.enable = true;
+  services.pipewire.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
