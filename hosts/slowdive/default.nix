@@ -22,7 +22,7 @@
     networkmanager.enable = true;
   };
  
-  programs.hyprland.enable = true;
+  
   
   # Enable sound.
   sound.enable = true;
@@ -45,18 +45,17 @@
     group = "gui";
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     hashedPassword = "$6$0pkRqHNzwEluhMz/$WVb0iiLiYz6avBxS0RgwrpTVsHTfsPEVPM17JjUvTQDFf3o3Q3FUrsGfLhLOMEEItR.Ph2ky56rPZVjpgBxWX0";
+    shell = pkgs.fish;
   };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    vim 
     wget
     firefox
     git
-    kitty
     swaybg
-    waybar
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

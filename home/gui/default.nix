@@ -1,13 +1,19 @@
 { config, pkgs, ... }:
 
-{ imports = [ ./neovim.nix ./fish ./git ];
+{ imports = [ ./neovim.nix ./fish ./git ./hyprland ./kitty ./waybar ];
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "gui";
   home.homeDirectory = "/home/gui";
  
-  home.packages = with pkgs; [ tree qbittorrent ];
+  home.packages = with pkgs; [ 
+    thunderbird
+    tree 
+    qbittorrent
+    vlc
+    htop
+  ];
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
