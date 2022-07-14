@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, libs, ... }:
 
 {
   imports =
@@ -20,6 +20,7 @@
   networking = {
     hostName = "slowdive"; # Define your hostname.
     networkmanager.enable = true;
+    useDHCP = lib.mkDefault true;
   };
  
   programs.hyprland.enable = true;
