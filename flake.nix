@@ -55,7 +55,7 @@
       homeConfigurations = {
         "gui@slowdive" = homeManagerConfiguration {
           # Configuração
-          modules = [ ./home/gui ];
+          modules = [ ./home/gui ./modules/home-manager ];
           # Repassar nossos inputs, para permitir referenciar da config
           extraSpecialArgs = { inherit inputs; };
           # Nossos pacotes

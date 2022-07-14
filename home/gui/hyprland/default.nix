@@ -1,17 +1,23 @@
-{ lib, config, pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
+  
+  imports = [ ../../common/wayland ];
 
-  home.packages = with pkgs; [ hyprland ];
+  home.packages = with pkgs;[ 
+    waybar
+    swaybg
+    wofi
+  ];
 
   wayland.windowManager.hyprland = {
     enable = true;
-    extraConfigs = ''
+    extraConfig = ''
       monitor=,1920x1080@60,0x0,1
 
 
       exec=swaybg -i /home/gui/Pictures/wp7199320.png &
-      exec-once=waybar
+      exec-once=waybar &
 
       input {
           kb_layout=
@@ -46,8 +52,8 @@
           # Your blur "amount" is blur_size * blur_passes, but high blur_size (over around 5-ish) will produce artifacts.
           # if you want heavy blur, you need to up the blur_passes.
           # the more passes, the more you can up the blur_size without noticing artifacts.
-          active_opacity=0.6
-          inactive_opacity=0.6
+          active_opacity=0.82
+          inactive_opacity=0.7
       }
 
       animations {

@@ -13,6 +13,8 @@
     qbittorrent
     vlc
     htop
+    fira-code
+    fira
   ];
 
   # This value determines the Home Manager release that your

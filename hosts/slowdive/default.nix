@@ -31,13 +31,9 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
 
-  # programs.sway.enable = true;
+  programs.xwayland.enable = true;
 
-  services.xserver = {
-    enable = true;
-    displayManager.sddm.enable = true;
-    
-  };
+  # programs.sway.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.gui = {
@@ -55,7 +51,6 @@
     wget
     firefox
     git
-    swaybg
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
