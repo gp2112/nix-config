@@ -55,6 +55,7 @@
     firefox
     git
     kitty
+    swaybg
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
