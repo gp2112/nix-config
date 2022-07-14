@@ -20,7 +20,6 @@
   networking = {
     hostName = "slowdive"; # Define your hostname.
     networkmanager.enable = true;
-    useDHCP = lib.mkDefault true;
   };
  
   programs.hyprland.enable = true;
@@ -43,6 +42,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.gui = {
     isNormalUser = true;
+    group = "gui";
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     hashedPassword = "$6$0pkRqHNzwEluhMz/$WVb0iiLiYz6avBxS0RgwrpTVsHTfsPEVPM17JjUvTQDFf3o3Q3FUrsGfLhLOMEEItR.Ph2ky56rPZVjpgBxWX0";
   };
