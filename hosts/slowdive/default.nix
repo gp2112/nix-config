@@ -22,7 +22,7 @@
     networkmanager.enable = true;
   };
  
-  # programs.hyprland.enable = true;
+  programs.hyprland.enable = true;
   
   # Enable sound.
   sound.enable = true;
@@ -31,7 +31,7 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
 
-  programs.sway.enable = true;
+  # programs.sway.enable = true;
 
   services.xserver = {
     enable = true;
