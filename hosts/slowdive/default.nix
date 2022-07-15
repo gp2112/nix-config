@@ -33,7 +33,10 @@
 
   programs.xwayland.enable = true;
 
+
   # programs.sway.enable = true;
+
+  # services.xserver.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.gui = {
