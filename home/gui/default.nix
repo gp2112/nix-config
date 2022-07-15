@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 
-{ imports = [ ./ssh ./neovim.nix ./fish ./git ./hyprland ./kitty ./waybar ];
+{ imports = [ ./gpg ./ssh ./neovim.nix ./fish ./git ./hyprland ./kitty ./waybar ];
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
