@@ -14,7 +14,7 @@
   # Use the systemd-boot EFI boot loader.
 
  
-  
+  nixpkgs.config.allowUnfree = true;
  
 
   networking = {
@@ -23,7 +23,14 @@
   };
  
   
-  
+  boot.loader.grub = {
+    enable = true;
+    version = 2;
+    efiSupport = true;
+    enableCryptodisk = true;
+    device = "nodev";
+  };
+
   # Enable sound.
   sound.enable = true;
   services.pipewire = {

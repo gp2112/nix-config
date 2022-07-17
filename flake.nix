@@ -43,7 +43,10 @@
       nixosConfigurations = {
         slowdive = nixosSystem {
           # Configuração
-          modules = [ ./hosts/slowdive ];
+          modules = [ 
+            ./hosts/slowdive 
+            hardware.asus.battery
+          ];
           # Repassar nossos inputs, para permitir referenciar da config
           specialArgs = { inherit inputs; };
           # Nossos pacotes

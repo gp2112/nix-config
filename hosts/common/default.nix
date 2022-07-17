@@ -14,9 +14,4 @@
 
   time.timeZone = "America/Sao_Paulo";
   
-  boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
-
-  };
 }

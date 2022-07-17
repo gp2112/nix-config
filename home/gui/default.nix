@@ -11,6 +11,7 @@
     thunderbird
     tree 
     qbittorrent
+    discord
     vlc
     htop
     fira-code
