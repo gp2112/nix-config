@@ -45,7 +45,6 @@
           # Configuração
           modules = [ 
             ./hosts/slowdive 
-            hardware.asus.battery
           ];
           # Repassar nossos inputs, para permitir referenciar da config
           specialArgs = { inherit inputs; };

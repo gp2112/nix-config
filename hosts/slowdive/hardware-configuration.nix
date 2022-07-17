@@ -8,7 +8,6 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   
   boot.initrd = {
@@ -22,6 +21,21 @@
       preLVM = true;
     };
   };
+
+
+  fileSystems."/" = {
+    device = "/dev/mapper/vg-root";
+    fsType = "btrfs";
+  };
+
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-label/boot";
+  };
+
+
+  swapDevices = [ 
+    { device = "/dev/mapper/vg-swap"; }
+  ];
 
   networking.interfaces.wlp2s0.useDHCP = lib.mkDefault true;
 

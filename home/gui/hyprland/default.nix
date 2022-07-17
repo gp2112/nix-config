@@ -16,7 +16,7 @@
       monitor=,1920x1080@60,0x0,1
 
 
-      exec=swaybg -i /home/gui/Pictures/wp7199320.png &
+      exec=swaybg -i /home/gui/Pictures/swaybg.png &
       exec-once=waybar &
 
       input {
@@ -87,7 +87,7 @@
       bind=SUPER,RETURN,exec,kitty
 
       # programs shortcut
-      #bind=SUPER,SHIFT+W,exec,firefox
+      bind=SUPERSHIFT,W,exec,firefox
 
       bind=SUPER,Q,killactive,
       bind=SUPER,M,exit,

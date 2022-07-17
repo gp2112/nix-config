@@ -11,7 +11,6 @@
       ../common
     ];
 
-  # Use the systemd-boot EFI boot loader.
 
  
   nixpkgs.config.allowUnfree = true;
@@ -23,12 +22,15 @@
   };
  
   
-  boot.loader.grub = {
-    enable = true;
-    version = 2;
-    efiSupport = true;
-    enableCryptodisk = true;
-    device = "nodev";
+  boot.loader = {
+    efi.efiSysMountPoint = "/boot";
+    grub = {
+      enable = true;
+      version = 2;
+      efiSupport = true;
+      enableCryptodisk = true;
+      device = "nodev";    
+    };
   };
 
   # Enable sound.
@@ -38,20 +40,11 @@
     pulse.enable = true;
   };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
-
   programs.xwayland.enable = true;
 
 
-  # programs.sway.enable = true;
-
-  # services.xserver.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.gui = {
     isNormalUser = true;
-    group = "gui";
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     hashedPassword = "$6$0pkRqHNzwEluhMz/$WVb0iiLiYz6avBxS0RgwrpTVsHTfsPEVPM17JjUvTQDFf3o3Q3FUrsGfLhLOMEEItR.Ph2ky56rPZVjpgBxWX0";
     shell = pkgs.fish;
@@ -64,6 +57,9 @@
     wget
     firefox
   ];
+
+  services.xserver.enable = true;
+  services.xserver.displayManager.sddm.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
