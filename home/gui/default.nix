@@ -14,8 +14,6 @@
     qbittorrent
     vlc
     htop
-    fira-code
-    fira
     python3
     cava
     gcc
@@ -23,8 +21,11 @@
     nodejs
     rustc
     keepassxc
-  ];
+    discord
 
+  ];
+  
+  
   home.stateVersion = "22.05";
 
   programs = {

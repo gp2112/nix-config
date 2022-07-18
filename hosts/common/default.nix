@@ -2,6 +2,7 @@
 
 {
   nix.package = pkgs.nixUnstable;
+  nixpkgs.config.allowUnfree = true;
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
@@ -13,4 +14,9 @@
 
   time.timeZone = "America/Sao_Paulo";
   
+  fonts.fonts = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" "CascadiaCode" ]; })
+  ];
+
+
 }

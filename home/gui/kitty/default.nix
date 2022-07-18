@@ -5,7 +5,7 @@
   programs.kitty = {
     enable = true;
     
-    font.name = "fira-code";
+    font.name = "Caskaydia Cove Nerd Font Complete";
 
 
   };

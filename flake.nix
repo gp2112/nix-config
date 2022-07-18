@@ -31,11 +31,13 @@
         hyprland = hyprland.overlays.default;
       };
 
+
       # Exportar pacotes com todas as overlays aplicadas
       packages = eachDefaultSystemMap (system:
         import nixpkgs {
           inherit system;
           overlays = attrValues overlays;
+          config.allowUnfree = true;
         }
       );
 

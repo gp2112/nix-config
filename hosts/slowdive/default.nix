@@ -11,11 +11,6 @@
       ../common
     ];
 
-
- 
-  nixpkgs.config.allowUnfree = true;
- 
-
   networking = {
     hostName = "slowdive"; # Define your hostname.
     networkmanager.enable = true;
