@@ -9,6 +9,7 @@
  
   home.packages = with pkgs; [ 
     thunderbird
+    tdesktop
     tree 
     qbittorrent
     vlc
@@ -21,6 +22,7 @@
     go
     nodejs
     rustc
+    keepassxc
   ];
 
   home.stateVersion = "22.05";

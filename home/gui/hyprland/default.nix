@@ -15,13 +15,12 @@
     extraConfig = ''
       monitor=,1920x1080@60,0x0,1
 
-
       exec=swaybg -i /home/gui/Pictures/swaybg.png &
       exec-once=waybar &
 
       input {
-          kb_layout=
-          kb_variant=
+          kb_layout=us
+          kb_variant=intl
           kb_model=
           kb_options=
           kb_rules=

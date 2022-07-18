@@ -20,8 +20,9 @@
     hostName = "slowdive"; # Define your hostname.
     networkmanager.enable = true;
   };
- 
-  
+
+  console.keyMap = "br-latin1-us";
+
   boot.loader = {
     efi.efiSysMountPoint = "/boot";
     grub = {
