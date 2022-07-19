@@ -10,7 +10,6 @@
       ./hardware-configuration.nix
       ../common
     ];
-
   networking = {
     hostName = "slowdive"; # Define your hostname.
     networkmanager.enable = true;

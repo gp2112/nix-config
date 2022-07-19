@@ -14,6 +14,7 @@
       ruby.symbol = " ";
       rust.symbol = " ";
       lua.symbol = " ";
+      package.symbol = " ";
 
       sudo = {
         symbol = "  ";
