@@ -15,6 +15,12 @@
     extraConfig = ''
       monitor=,1920x1080@60,0x0,1
 
+      $lock = echo ig #swaylock --screenshots --clock --effect-blur 5x6
+      $pwrdialog = zenity --info --text="Suspend (s), Hibernate(h), Lock(l) or Shutdown (shift+s)"
+      $reset = hyprctl dispatch submap reset
+      $pwrmode = hyprctl dispatch submap powermgt
+
+
       exec=swaybg -i /home/gui/Pictures/swaybg.png &
       exec-once=waybar &
 
@@ -81,6 +87,21 @@
       #windowrule=monitor 0,xyz
 
       monitor=HDMI-1,1920x1080@60,1920x0,1
+
+      
+      submap=powermgt
+      
+      bind=,s,exec,$reset && $lock & systemctl suspend
+      bind=,h,exec,$reset && systemctl hibernate
+      bind=,l,exec,$reset && $lock
+      bind=SHIFT,s,exec,$reset && shutdown -P now
+
+      bind=,escape,submap,reset
+
+      submap=reset
+
+      bind=ALT,S,exec,$pwrdialog & $pwrmode
+
 
       # example binds
       bind=SUPER,RETURN,exec,kitty

@@ -22,7 +22,8 @@
     rustc
     keepassxc
     discord
-
+    swaylock-effects
+    gnome.zenity
   ];
   
   
