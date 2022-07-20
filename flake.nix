@@ -68,11 +68,18 @@
       homeConfigurations = {
         "gui@slowdive" = homeManagerConfiguration {
           # Configuração
-          modules = [ ./home/gui ./modules/home-manager ];
+          modules = [ ./home/gui/slowdive ./modules/home-manager ];
           # Repassar nossos inputs, para permitir referenciar da config
           extraSpecialArgs = { inherit inputs; };
           # Nossos pacotes
           pkgs = packages.x86_64-linux;
+        };
+
+        "gui@rasp" = homeManagerConfiguration {
+          modules = [ ./home/gui/rasp ];
+          extraSpecialArgs = { inherit inputs; };
+          pkgs = packages.aarch64-linux;
+          
         };
       };
     };
