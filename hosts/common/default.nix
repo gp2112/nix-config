@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+  import = [ ./users.nix ];
+
   nix.package = pkgs.nixUnstable;
   nixpkgs.config.allowUnfree = true;
   nix.extraOptions = ''

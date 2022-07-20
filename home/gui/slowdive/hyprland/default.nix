@@ -2,12 +2,13 @@
 
 {
   
-  imports = [ ../../common/wayland ];
+  imports = [ ../common/wayland ./waybar];
 
   home.packages = with pkgs;[ 
-    waybar
     swaybg
     wofi
+    swaylock-effects
+    gnome.zenity
   ];
 
   wayland.windowManager.hyprland = {

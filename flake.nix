@@ -54,6 +54,15 @@
           pkgs = packages.x86_64-linux;
           system = "x86_64-linux";
         };
+        rasp = nixosSystem {
+          modules = [ 
+            ./hosts/rasp
+          ];
+          specialArgs = { inherit inputs; };
+
+          pkgs = packages.aarch64-linux;
+          system = "aarch64-linux";
+        }
       };
 
       homeConfigurations = {
