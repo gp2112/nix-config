@@ -11,6 +11,7 @@
     keepassxc
     discord
     firefox
+    chromium
 
   ];
 

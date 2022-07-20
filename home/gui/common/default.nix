@@ -7,13 +7,16 @@
   home.homeDirectory = "/home/gui";
 
   home.packages = with pkgs; [ 
+    neofetch # yes
     tree 
+    curl
     htop
     python3
     gcc
     go
     nodejs
     rustc
+    nettools
   ];
 
   home.stateVersion = "22.05";
