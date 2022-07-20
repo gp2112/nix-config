@@ -7,18 +7,10 @@
       ../common
     ];
 
-  # Use the systemd-boot EFI boot loader.
-
- 
-  
- 
-
   networking = {
     hostName = "frostbyte"; # Define your hostname.
   };
- 
-  
-  
+
   # Enable sound.
   sound.enable = true;
   services.pipewire.enable = true;

@@ -15,6 +15,8 @@
     networkmanager.enable = true;
   };
 
+  users.users.gui.extraGroups = [ "networkmanager" ];
+
   console.keyMap = "br-latin1-us";
 
   boot.loader = {
