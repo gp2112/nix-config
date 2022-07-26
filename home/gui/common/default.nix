@@ -7,7 +7,6 @@
   home.homeDirectory = "/home/gui";
 
   home.packages = with pkgs; [ 
-    neofetch # yes
     tree 
     curl
     htop

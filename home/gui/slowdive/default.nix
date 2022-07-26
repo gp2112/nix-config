@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 
-{ imports = [ ../common/desktops ./hyprland ./kitty ];
+{ imports = [ ../common ../common/desktops ./hyprland ./kitty ];
 
    
   home.packages = with pkgs; [ 

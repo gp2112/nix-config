@@ -2,7 +2,7 @@
 
 {
   
-  imports = [ ../common/wayland ./waybar];
+  imports = [ ../../common/wayland ./waybar];
 
   home.packages = with pkgs;[ 
     swaybg

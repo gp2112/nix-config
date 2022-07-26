@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  import = [ ./users.nix ];
+  imports = [ ./users.nix ];
 
   nix.package = pkgs.nixUnstable;
   nixpkgs.config.allowUnfree = true;

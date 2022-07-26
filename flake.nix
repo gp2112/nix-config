@@ -62,7 +62,7 @@
 
           pkgs = packages.aarch64-linux;
           system = "aarch64-linux";
-        }
+        };
       };
 
       homeConfigurations = {
