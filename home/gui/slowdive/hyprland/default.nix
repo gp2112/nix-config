@@ -9,6 +9,8 @@
     wofi
     swaylock-effects
     gnome.zenity
+    dolphin
+    xdragon
   ];
 
   wayland.windowManager.hyprland = {
