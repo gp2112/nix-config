@@ -110,7 +110,7 @@
       # programs shortcut
       bind=SUPERSHIFT,W,exec,firefox
 
-      bind=SUPER,Q,killactive,
+      bind=SUPERSHIFT,Q,killactive,
       bind=SUPER,M,exit,
       bind=SUPER,E,exec,dolphin
       bind=SUPER,V,togglefloating,
@@ -133,15 +133,15 @@
       bind=SUPER,9,workspace,9
       bind=SUPER,0,workspace,10
 
-      bind=ALT,1,movetoworkspace,1
-      bind=ALT,2,movetoworkspace,2
-      bind=ALT,3,movetoworkspace,3
-      bind=ALT,4,movetoworkspace,4
-      bind=ALT,5,movetoworkspace,5
-      bind=ALT,6,movetoworkspace,6
-      bind=ALT,7,movetoworkspace,7
-      bind=ALT,8,movetoworkspace,8
-      bind=ALT,9,movetoworkspace,9
-      bind=ALT,0,movetoworkspace,10'';
+      bind=SUPERSHIFT,exclam,movetoworkspace,1
+      bind=SUPERSHIFT,at,movetoworkspace,2
+      bind=SUPERSHIFT,numbersign,movetoworkspace,3
+      bind=SUPERSHIFT,dollar,movetoworkspace,4
+      bind=SUPERSHIFT,percent,movetoworkspace,5
+      bind=SUPERSHIFT,asciicircum,movetoworkspace,6
+      bind=SUPERSHIFT,ampersand,movetoworkspace,7
+      bind=SUPERSHIFT,asterisk,movetoworkspace,8
+      bind=SUPERSHIFT,parentleft,movetoworkspace,9
+      bind=SUPERSHIFT,parentright,movetoworkspace,10'';
   };
 }
