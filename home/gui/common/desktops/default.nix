@@ -11,7 +11,7 @@
     discord
     firefox
     chromium
-
+    sonixd
   ];
 
 }
