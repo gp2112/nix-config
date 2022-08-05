@@ -12,6 +12,8 @@
     firefox
     chromium
     sonixd
+    evince
+    spotify
   ];
 
 }

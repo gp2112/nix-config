@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../common
+      ./services
     ];
   networking = {
     hostName = "slowdive"; # Define your hostname.
@@ -57,6 +58,7 @@
   networking.firewall.allowedUDPPortRanges = [ 
     {from = 1714; to = 1764;} # kde connect
   ];
+  networking.firewall.allowedTCPPorts = [ 8000 ];
 
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
