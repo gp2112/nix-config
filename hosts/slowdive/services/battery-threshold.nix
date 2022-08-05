@@ -1,13 +1,12 @@
 { config, pkgs,... }:
 
-{
-  systemd.services.battery-charge-threshold =
-      let   
-        BATTERY_DEVICE = "BAT0";
-        MAXCHARGE = 68;
-      
-       
-      in {
+
+let   
+  BATTERY_DEVICE = "BAT0";
+  MAXCHARGE = 68;
+           
+in {
+  systemd.services.battery-charge-threshold = {
 
       unitConfig = {
 
