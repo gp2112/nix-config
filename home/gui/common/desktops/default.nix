@@ -14,6 +14,7 @@
     sonixd
     evince
     spotify
+    zettlr
   ];
 
 }
