@@ -5,12 +5,13 @@
   imports = [ 
     ../../common/wayland 
     ./waybar
+    ./swaylock.nix
   ];
 
   home.packages = with pkgs; [
         bemenu
-        swaylock
         swayidle
+        swaylock
         mako
   ];
 
@@ -46,6 +47,14 @@
       modifier = mod;
 
       terminal = term;
+      
+      defaultWorkspace = "workspace number 1";
+
+      output = {
+        "*" = {
+          bg = "/home/gui/Pictures/swaybg.png fill";
+        };
+      };
 
       gaps = {
         inner = 6;

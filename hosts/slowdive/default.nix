@@ -16,7 +16,9 @@
     networkmanager.enable = true;
   };
 
-  users.users.gui.extraGroups = [ "networkmanager" ];
+  users.users.gui.extraGroups = [ 
+    "networkmanager" 
+  ];
 
   console.keyMap = "br-latin1-us";
 
@@ -39,9 +41,8 @@
   };
 
   programs.xwayland.enable = true;
-
-
   
+    
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -50,7 +51,7 @@
     git
   ];
 
-  
+  security.pam.services.swaylock = {} ;
   
   networking.firewall.allowedTCPPortRanges = [ 
     {from = 1714; to = 1764;} # kde connect

@@ -3,7 +3,7 @@
 
 let   
   BATTERY_DEVICE = "BAT0";
-  MAXCHARGE = 68;
+  MAXCHARGE = 98;
            
 in {
   systemd.services.battery-charge-threshold = {

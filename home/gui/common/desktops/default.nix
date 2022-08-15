@@ -13,7 +13,7 @@
     chromium
     sonixd
     evince
-    spotify
+    spotify-qt
     zettlr
   ];
 

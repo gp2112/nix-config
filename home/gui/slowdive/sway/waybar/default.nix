@@ -1,18 +1,26 @@
 { config, pkgs, ... }:
 
 {
+
+  imports = [ ./style.nix ];
+
   programs.waybar = {
     enable = true;
     settings = {
-      primary = {
+
+      
+      
+
+      topBar = {
         layer = "top";
         position = "top";
         height = 30;
+        spacing = 7;
         output = [ "eDP-1" ];
-        modules-left = [ "wlr/workspaces" "wlr/mode" "wlr/taskbar" ];
+        modules-left = [ "sway/mode" "wlr/taskbar" ];
         modules-center = [ "clock" ];
         modules-right = [ "pulseaudio" "network" "backlight" "bluetooth" "temperature" "battery" ];
-        
+
         clock = {
           format = "{:%H:%M %A %d/%m/%Y}";
         };
@@ -47,12 +55,24 @@
           format-icons = [ "" " " " " " " ];
         };
 
-        "wlr/workspaces" = {
-          format = "{icon}";
+      };
 
+      bottomBar = {
+        layer = "bottom";
+        position = "bottom";
+        height = 40;
+        width = 400;
+        output = [ "eDP-1" ];
+        modules-left = [ "sway/window" ];
+        modules-center = [ "sway/workspaces" ];
+        margin-left = 5;
+
+        "sway/workspaces" = {
+          format = "  {index}  ";
         };
 
       };
+
     };
   };
 }
