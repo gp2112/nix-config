@@ -38,7 +38,7 @@
     term = "alacritty";
     menu = "bemenu-run | xargs swaymsg exec --";
     modepower = "(l) lock, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown";
-    lock = "swaylock -f -i /home/gui/Pictures/doge.jpg";
+    lock = "swaylock -f";
   in {
     
     enable = true;
@@ -133,6 +133,8 @@
           "${mod}+Shift+r" = "mode resize";
           "${mod}+v" = "split v";
           "${mod}+h" = "split h";
+
+          "${mod}+Shift+l" = "exec ${lock}";
       };
 
       modes = {
