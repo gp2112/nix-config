@@ -42,5 +42,10 @@
 
   };
 
-   
+  programs.fish.shellInit = ''
+    if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ];
+      exec sway
+    end
+  '';
+
 }
