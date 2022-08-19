@@ -61,19 +61,7 @@
         outer = 10;
       };
 
-      input = {
-        "*" = {
-          xkb_layout = "us(intl)";
-        };
-
-        "type:touchpad" = {
-          dwt = "enabled";
-          tap = "enabled";
-          middle_emulation = "enabled";
-        };
-
-      };
-
+      
       bars = [{
         command = "waybar";
       }];

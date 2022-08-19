@@ -19,24 +19,10 @@
   programs.xwayland.enable = true;
 
 
-  # programs.sway.enable = true;
-
-  # services.xserver.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.gui = {
-    isNormalUser = true;
-    group = "gui";
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    hashedPassword = "$6$0pkRqHNzwEluhMz/$WVb0iiLiYz6avBxS0RgwrpTVsHTfsPEVPM17JjUvTQDFf3o3Q3FUrsGfLhLOMEEItR.Ph2ky56rPZVjpgBxWX0";
-    shell = pkgs.fish;
-  };
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim 
+    nvim 
     wget
+    git
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -52,11 +38,18 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  
+  security.pam.services.swaylock = {} ;
+  
+  networking.firewall.allowedTCPPortRanges = [ 
+    {from = 1714; to = 1764;} # kde connect
+  ];
+  networking.firewall.allowedUDPPortRanges = [ 
+    {from = 1714; to = 1764;} # kde connect
+  ];
+  networking.firewall.allowedTCPPorts = [ 8000 ];
+
+
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
