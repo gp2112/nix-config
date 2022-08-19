@@ -3,7 +3,7 @@
 {
   
   imports = [ 
-    ../../common/wayland 
+    ../wayland 
     ./waybar
     ./swaylock.nix
   ];
