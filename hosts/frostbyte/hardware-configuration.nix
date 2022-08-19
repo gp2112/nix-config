@@ -1,12 +1,8 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
-    ];
+  
 
-  boot.initrd.availableKernelModules = [ "ahci" "xhci_pci" "sd_mod" ];
-  boot.extraModulePackages = [ ];
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.enable = true;
 
