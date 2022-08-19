@@ -40,7 +40,6 @@
     alsa.enable = true;
     alsa.support32Bit = true;
   };
-  security.rtkit.enable = true;
 
   programs.xwayland.enable = true;
   
