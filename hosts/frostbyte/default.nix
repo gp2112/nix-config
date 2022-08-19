@@ -18,6 +18,15 @@
 
   programs.xwayland.enable = true;
 
+  boot.loader = {
+    efi.efiSysMountPoint = "/boot";
+    grub = {
+      enable = true;
+      version = 2;
+      efiSupport = true;
+    };
+  };
+
 
   environment.systemPackages = with pkgs; [
     nvim 
