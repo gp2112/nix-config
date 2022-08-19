@@ -4,7 +4,7 @@
   inputs = {
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    hardware.url = "github:nixos/nixos-hardware";
+    nixos-hardware.url = "github:nixos/nixos-hardware/master";
 
     flake-utils.url = "github:numtide/flake-utils";
 
@@ -15,7 +15,7 @@
     hyprland.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, home-manager, hyprland, flake-utils, ... }@inputs:
+  outputs = { nixpkgs, home-manager, hyprland, nixos-hardware, flake-utils, ... }@inputs:
     let
       inherit (builtins) attrValues;
       inherit (flake-utils.lib) eachDefaultSystemMap;
@@ -66,8 +66,8 @@
         frostbyte = nixosSystem {
           modules = [
             ./hosts/frostbyte
-            hardware.nixosModules.common-gpu-amd
-            hardware.nixosModules.common-cpu-intel-cpu-only
+            nixos-hardware.nixosModules.common-gpu-amd
+            nixos-hardware.nixosModules.common-cpu-intel-cpu-only
           ];
           specialArgs = { inherit inputs; };
 
