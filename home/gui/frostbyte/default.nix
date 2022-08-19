@@ -15,7 +15,7 @@
   wayland.windowManager.sway.config = {
     input = {
         "*" = {
-          xkb_layout = "br-abnt2";
+          xkb_layout = "br";
         };
         
     };
