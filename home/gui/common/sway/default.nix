@@ -13,6 +13,7 @@
         swayidle
         swaylock
         mako
+        sirula
   ];
 
   programs.alacritty = {
@@ -26,6 +27,7 @@
     };
   };
 
+
   wayland.windowManager.sway = 
 
   let
@@ -36,7 +38,7 @@
     up = "Up";
     right = "Right";
     term = "kitty";
-    menu = "bemenu-run | xargs swaymsg exec --";
+    menu = "sirula";
     modepower = "(l) lock, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown";
     lock = "swaylock -f";
   in {
@@ -62,6 +64,10 @@
       }];
 
       
+      startup = [
+        { command = "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK"; }
+      ];
+     
 
       keybindings = {
         "${super}+p" = "exec shotman area";

@@ -20,7 +20,7 @@
   };
   
   programs.xwayland.enable = true;
-
+  security.polkit.enable = true;
   
   environment.systemPackages = with pkgs; [
     vim 
@@ -28,9 +28,9 @@
     git
   ];
 
+ 
+  services.dbus.enable = true;
   
-  # List services that you want to enable:
-
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 

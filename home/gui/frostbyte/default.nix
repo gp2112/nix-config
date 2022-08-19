@@ -11,7 +11,6 @@
    
   home.packages = with pkgs; [ 
     cava
-    konsole
     obs-studio
     krita
     kdenlive
@@ -22,7 +21,7 @@
       exec sway
     end
   '';
-
+  
   wayland.windowManager.sway = {
 
     wrapperFeatures.gtk = true;
