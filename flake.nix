@@ -63,6 +63,16 @@
           pkgs = packages.aarch64-linux;
           system = "aarch64-linux";
         };
+        frostbyte = nixosSystem {
+          modules = [
+            ./hosts/frostbyte
+          ];
+          specialArgs = { inherit inputs; };
+
+          pkgs = packages.x86_64-linux;
+          system = "x86_64-linux";
+
+        };
       };
 
       homeConfigurations = {
@@ -81,6 +91,13 @@
           pkgs = packages.aarch64-linux;
           
         };
+        "gui@frostbyte" = homeManagerConfiguration {
+          modules = [ ./home/gui/frostbyte ];
+          extraSpecialArgs = { inherit inputs; };
+          pkgs = packages.x86_64-linux;
+          
+        };
+
       };
     };
 }
