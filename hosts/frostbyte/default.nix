@@ -18,17 +18,7 @@
 
   programs.xwayland.enable = true;
 
-  boot.loader = {
-    efi.efiSysMountPoint = "/boot";
-    grub = {
-      enable = true;
-      version = 2;
-      efiSupport = true;
-      device = "nodev";
-    };
-  };
-
-
+  
   environment.systemPackages = with pkgs; [
     vim 
     wget

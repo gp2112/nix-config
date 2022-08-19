@@ -9,6 +9,7 @@
   boot.initrd.kernelModules = [ "amdgpu" ];
   boot.extraModulePackages = [ ];
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.enable;
 
  
 
