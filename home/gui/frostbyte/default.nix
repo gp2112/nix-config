@@ -10,6 +10,7 @@
    
   home.packages = with pkgs; [ 
     cava
+    konsole
   ];
 
   wayland.windowManager.sway.config = {
