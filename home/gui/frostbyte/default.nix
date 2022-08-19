@@ -4,6 +4,7 @@
     ../common
     ../common/desktops
     ../common/wayland
+    ../common/sway
   ];
 
    
