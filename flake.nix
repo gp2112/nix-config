@@ -66,6 +66,8 @@
         frostbyte = nixosSystem {
           modules = [
             ./hosts/frostbyte
+            hardware.nixosModules.common-gpu-amd
+            hardware.nixosModules.common-cpu-intel-cpu-only
           ];
           specialArgs = { inherit inputs; };
 
