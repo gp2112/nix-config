@@ -12,8 +12,10 @@
   };
 
   # Enable sound.
-  sound.enable = true;
-  services.pipewire.enable = true;
+  services.pipewire = {
+    enable = true;
+    pulse.enable = true;
+  };
 
 
   programs.xwayland.enable = true;
@@ -50,6 +52,7 @@
   networking.firewall.allowedTCPPorts = [ 8000 ];
 
 
+  
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

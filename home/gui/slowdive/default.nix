@@ -4,6 +4,7 @@
   ../common 
   ../common/desktops
   ../common/sway
+  ./kitty
 ];
 
   wayland.windowManager.sway.config = {
@@ -40,6 +41,10 @@
 
     };
 
+  };
+
+  programs.swaylock.settings = {
+      image = "/home/gui/Pictures/lockbg.jpg";
   };
 
    

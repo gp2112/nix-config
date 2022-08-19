@@ -35,7 +35,7 @@
     down = "Down";
     up = "Up";
     right = "Right";
-    term = "alacritty";
+    term = "kitty";
     menu = "bemenu-run | xargs swaymsg exec --";
     modepower = "(l) lock, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown";
     lock = "swaylock -f";
