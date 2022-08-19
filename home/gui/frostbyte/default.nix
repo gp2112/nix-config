@@ -20,11 +20,11 @@
         
     };
 
-    output = {
+    /*output = {
       "*" = {
         bg = "/home/gui/Pictures/swaybg.png fill";
       };
-    };
+    };*/
   };
 
 
