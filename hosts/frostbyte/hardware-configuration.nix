@@ -6,13 +6,26 @@
     ];
   boot.initrd = {
       availableKernelModules = [ "ahci" "xhci_pci" "sd_mod" ];
-      kernelModules = [ ];
+      kernelModules = [ "amdgpu" ];
   };
 
 
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.enable = true;
 
+  hardware.opengl.extraPackages = with pkgs; [
+    rocm-opencl-icd
+    rocm-opencl-runtime
+    amdvlk
+  ];
+
+  hardware.opengl.extraPackages32 = with pkgs; [
+    driversi686Linux.amdvlk
+  ];
+
+  hardware.opengl.driSupport = true;
+  # For 32 bit applications
+  hardware.opengl.driSupport32Bit = true;
  
 
   fileSystems = {
