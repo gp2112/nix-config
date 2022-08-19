@@ -21,22 +21,30 @@
         
     };
 
-    /*output = {
-      "*" = {
-        bg = "/home/gui/Pictures/swaybg.png fill";
+    *output = {
+      #"*" = {
+      #  bg = "/home/gui/Pictures/swaybg.png fill";
+      #};
+      "HDMI-A-2" = {
+        position = "1920,0";
       };
-    };*/
+
+      "DP-2" = {
+        position = "0,0";
+      };
+
+    };
   };
 
 
   programs.waybar.settings = {
     topBar = {
-      output = ["DP-1"];
+      output = ["DP-2"];
       modules-right = [ "pulseaudio" "network" "temperature" ];
     };
 
     bottomBar = {
-      output = [ "DP-1" ];
+      output = [ "DP-2" ];
     };
 
   };

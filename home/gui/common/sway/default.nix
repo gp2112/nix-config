@@ -13,7 +13,6 @@
         swayidle
         swaylock
         mako
-        alacritty
   ];
 
   programs.alacritty = {
