@@ -27,5 +27,20 @@
       };
 
   };
+
+  programs.waybar.settings = {
+    topBar = {
+      output = ["eDP-1"];
+      modules-right = [ "pulseaudio" "network" "backlight" "bluetooth" "temperature" "battery" ];
+    };
+
+    bottomBar = {
+
+      output = [ "eDP-1" ];
+
+    };
+
+  };
+
    
 }

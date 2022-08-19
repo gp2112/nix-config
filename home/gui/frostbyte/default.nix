@@ -21,10 +21,22 @@
     };
 
     output = {
-        "*" = {
-          bg = "/home/gui/Pictures/swaybg.png fill";
-        };
+      "*" = {
+        bg = "/home/gui/Pictures/swaybg.png fill";
       };
+    };
+  };
+
+
+  programs.waybar.settings = {
+    topBar = {
+      output = ["DP-1"];
+      modules-right = [ "pulseaudio" "network" "temperature" ];
+    };
+
+    bottomBar = {
+      output = [ "DP-1" ];
+    };
 
   };
 

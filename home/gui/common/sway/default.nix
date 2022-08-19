@@ -50,12 +50,7 @@
       
       defaultWorkspace = "workspace number 1";
 
-      output = {
-        "*" = {
-          bg = "/home/gui/Pictures/swaybg.png fill";
-        };
-      };
-
+      
       gaps = {
         inner = 6;
         outer = 10;
