@@ -15,6 +15,7 @@
     evince
     spotify-qt
     zettlr
+    pulseaudio
   ];
 
 }
