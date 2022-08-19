@@ -8,6 +8,7 @@
   boot.initrd.availableKernelModules = [ "ahci" "xhci_pci" "sd_mod" ];
   boot.initrd.kernelModules = [ "amdgpu" ];
   boot.extraModulePackages = [ ];
+  boot.loader.efi.canTouchEfiVariables = true;
 
  
 
