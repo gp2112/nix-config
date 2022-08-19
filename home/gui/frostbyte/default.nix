@@ -11,7 +11,6 @@
    
   home.packages = with pkgs; [ 
     cava
-    obs-studio
     krita
     kdenlive
   ];
@@ -21,6 +20,13 @@
       exec sway
     end
   '';
+
+  programs.obs-studio = {
+    enable = true;
+    plugins = with pkgs.obs-studio-plugins; [
+      wlrobs
+    ];
+  };
   
   wayland.windowManager.sway = {
 

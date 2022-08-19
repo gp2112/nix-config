@@ -9,7 +9,7 @@
 
   home.sessionVariables = {
     MOZ_ENABLE_WAYLAND = true;
-    QT_QPA_PLATAFORM = "wayland";
+    QT_QPA_PLATFORM = "wayland";
   };
 
 }
