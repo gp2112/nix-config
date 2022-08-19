@@ -4,6 +4,7 @@
   ../common 
   ../common/desktops
   ../common/sway
+  ./kitty
 ];
 
   home.packages = with pkgs; [ 
@@ -52,4 +53,8 @@
     end
   '';
 
+  programs.swaylock.settings = {
+      image = "/home/gui/Pictures/lockbg.jpg";
+  };
+   
 }

@@ -12,8 +12,10 @@
   };
 
   # Enable sound.
-  sound.enable = true;
-  services.pipewire.enable = true;
+  services.pipewire = {
+    enable = true;
+    pulse.enable = true;
+  };
 
 
   programs.xwayland.enable = true;
@@ -25,14 +27,7 @@
     git
   ];
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
-
+  
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
@@ -50,6 +45,7 @@
   networking.firewall.allowedTCPPorts = [ 8000 ];
 
 
+  
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

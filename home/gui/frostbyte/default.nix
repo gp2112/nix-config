@@ -5,37 +5,57 @@
     ../common/desktops
     ../common/wayland
     ../common/sway
+    ./games
   ];
 
    
   home.packages = with pkgs; [ 
     cava
     konsole
+    obs-studio
+    krita
+    kdenlive
   ];
 
-  wayland.windowManager.sway.config = {
-    input = {
+  programs.fish.shellInit = ''
+    if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ];
+      exec sway
+    end
+  '';
+
+  wayland.windowManager.sway = {
+
+    wrapperFeatures.gtk = true;
+
+    config = {
+
+    
+
+      input = {
+          "*" = {
+            xkb_layout = "br";
+          };
+          
+      };
+
+      
+      output = {
         "*" = {
-          xkb_layout = "br";
+          bg = "/home/gui/Pictures/swaybg.png fill";
         };
-        
-    };
+        "HDMI-A-2" = {
+          position = "0,0";
+          res = "1920x1080@60hz";
+        };
 
-    output = {
-      #"*" = {
-      #  bg = "/home/gui/Pictures/swaybg.png fill";
-      #};
-      "HDMI-A-2" = {
-        position = "1920,0";
+        "DP-2" = {
+          position = "1920,0";
+          res = "1920x1080@144hz";
+        };
+
       };
-
-      "DP-2" = {
-        position = "0,0";
-      };
-
     };
   };
-
 
   programs.waybar.settings = {
     topBar = {
@@ -44,10 +64,18 @@
     };
 
     bottomBar = {
-      output = [ "DP-2" ];
+      output = [ "DP-2" "HDMI-A-2" ];
     };
 
   };
 
+  programs.swaylock.settings = {
+      image = "/home/gui/Pictures/lockbg.png";
+  };
+
+  programs.kitty = {
+    enable = true;
+    font.name = "Caskaydia Cove Nerd Font Complete";
+  };
 
 }
