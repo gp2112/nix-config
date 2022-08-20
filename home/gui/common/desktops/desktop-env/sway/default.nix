@@ -8,7 +8,6 @@ in {
   imports = [ 
     ../../wayland 
     ./waybar
-    ./swaylock.nix
     ../../terminal-emulator/kitty
   ];
 
