@@ -10,7 +10,7 @@
 		./navidrome.nix
 	    ./deluge.nix
 	    ./nginx
-	    ./headscale.nix
+        ./git
 	];
 
   fileSystems = {

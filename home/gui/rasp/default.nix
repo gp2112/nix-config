@@ -2,19 +2,14 @@
 { config, pkgs, ... }:
 
 { 
-  imports = [ ./common ];
+  imports = [ ../common ];
 
-  programs = {
-    beets = {
-      enable = true;
-      settings = {
-        plugins = [ "fetchart" ];
-      };
+  programs.beets = {
+    enable = true;
+    settings = {
+      plugins = [ "fetchart" ];
     };
-  
   };
-
-
 
 }
 
