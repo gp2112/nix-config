@@ -89,13 +89,11 @@
           modules = [ ./home/gui/rasp ];
           extraSpecialArgs = { inherit inputs; };
           pkgs = packages.aarch64-linux;
-          
         };
         "gui@frostbyte" = homeManagerConfiguration {
           modules = [ ./home/gui/frostbyte ];
           extraSpecialArgs = { inherit inputs; };
           pkgs = packages.x86_64-linux;
-          
         };
 
       };

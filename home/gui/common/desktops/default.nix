@@ -1,15 +1,15 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 
 # Default packages for my desktop computers
 
-{ 
+{
   imports = [
-    ./aesthetic.nix 
+    ./aesthetic.nix
     ./terminal-emulator/kitty
   ];
- 
-  home.packages = with pkgs; [ 
+
+  home.packages = with pkgs; [
     htop
     pavucontrol
     thunderbird

@@ -1,5 +1,9 @@
 { config, pkgs, ... }:
 {
+  imports = [
+    ./lsp.nix
+    ./syntax.nix
+  ];
   programs.neovim = {
     enable = true;
     extraConfig = ''
@@ -36,10 +40,10 @@
 
   plugins = with pkgs.vimPlugins; [
     nightfox-nvim
-    vim-nix
     nerdcommenter
-    auto-pairs
+    vim-surround
     nerdtree
+    nvim-autopairs
   ];
 
  };

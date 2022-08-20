@@ -1,7 +1,7 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 
 {
-  imports = [ 
+  imports = [
     ../common/desktops/desktop-env/sway
   ];
 
@@ -13,9 +13,7 @@
             "*" = {
               xkb_layout = "br";
             };
-            
         };
-        
         output = {
           "*" = {
             bg = "/home/gui/Pictures/swaybg.png fill";

@@ -1,13 +1,13 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
-{ 
-  imports = [ ./gpg ./ssh ./neovim.nix ./fish ./git ];
+{
+  imports = [ ./gpg ./ssh ./nvim ./fish ./git ];
 
   home.username = "gui";
   home.homeDirectory = "/home/gui";
 
-  home.packages = with pkgs; [ 
-    tree 
+  home.packages = with pkgs; [
+    tree
     curl
     htop
     python3
