@@ -9,7 +9,6 @@
   ];
 
   home.packages = with pkgs; [
-        bemenu
         swayidle
         mako
         sirula
