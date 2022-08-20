@@ -11,9 +11,11 @@
   home.packages = with pkgs; [
         bemenu
         swayidle
-        swaylock
         mako
         sirula
+        sway-contrib.grimshot
+        swaylock-effects
+        playerctl
   ];
 
   programs.alacritty = {
@@ -40,7 +42,7 @@
     term = "kitty";
     menu = "sirula";
     modepower = "(l) lock, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown";
-    lock = "swaylock -f";
+    lock = "swaylock -f --screenshots --clock --effect-blur 7x4 --effect-vignette 0.3:0.8";
   in {
     
     enable = true;
@@ -70,9 +72,9 @@
      
 
       keybindings = {
-        "${super}+p" = "exec shotman area";
-        "${super}+Shift+p" = "exec shotman active";
-        "${super}+Ctrl+p" = "exec shotman window";
+        "${super}+p" = "exec grimshot copy area";
+        "${super}+Shift+p" = "exec grimshot copy active";
+        "${super}+Ctrl+p" = "exec grimshot copy window";
         "${mod}+Shift+w" = "exec firefox";
         "XF86AudioRaiseVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ +5%";
         "XF86AudioLowerVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ -5%";
@@ -83,7 +85,7 @@
         "XF86AudioPlay" = "exec playerctl play-pause";
         "XF86AudioNext" = "exec playerctl next";
         "XF86AudioPrev" = "exec playerctl previous";
-        "XF86Search" = "exec bemenu-run";
+        "XF86Search" = "exec ${menu}";
         "${mod}+d" = "exec ${menu}";
         "${mod}+Return" = "exec ${term}";
         "${mod}+Shift+q" = "kill";

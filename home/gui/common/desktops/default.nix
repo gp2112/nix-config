@@ -15,9 +15,12 @@
     chromium
     sonixd
     evince
-    spotify-qt
+    spotify
     zettlr
     pulseaudio
+    ffmpeg
+    libreoffice
+    xdragon
   ];
 
 }

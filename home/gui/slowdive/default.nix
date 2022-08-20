@@ -53,8 +53,8 @@
     end
   '';
 
-  programs.swaylock.settings = {
+  /*programs.swaylock.settings = {
       image = "/home/gui/Pictures/lockbg.jpg";
-  };
+  };*/
    
 }
