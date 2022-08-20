@@ -6,9 +6,10 @@ let
 in {
   
   imports = [ 
-    ../wayland 
+    ../../wayland 
     ./waybar
     ./swaylock.nix
+    ../../terminal-emulator/kitty
   ];
 
   home.packages = with pkgs; [
@@ -16,7 +17,6 @@ in {
         sirula
         sway-contrib.grimshot
         swaylock-effects
-        playerctl
   ];
 
   services.swayidle = {
@@ -34,17 +34,7 @@ in {
   };
 
 
-  programs.alacritty = {
-    enable = true;
-    settings = {
-      font.normal = {
-        #family = "CascadiaCode";
-        family = "FuraCode Nerd Font Mono:style=Medium,Regular";
-        style = "Regular";
-      };
-    };
-  };
-
+  
 
   wayland.windowManager.sway = 
 
@@ -62,6 +52,8 @@ in {
   in {
     
     enable = true;
+
+    wrapperFeatures.gtk = true;
 
     config = {
       modifier = mod;
