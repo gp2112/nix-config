@@ -22,6 +22,7 @@ And a special thanks to [Misterio](https://github.com/Misterio77), for showing m
   * **Storage:** 256GB SSD
 
 * Rasp - My Homeserver :v
+  * Just a Raspberry PI
   * **Model:** 4
   * **RAM:** 8GB LDDR3
   * **Storage:** 32 GB SD Card + 1TB HDD USB
