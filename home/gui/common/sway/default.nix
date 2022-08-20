@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
-{
+let
+  lock = "swaylock -f --screenshots --clock --effect-blur 7x4 --effect-vignette 0.3:0.8";
+
+in {
   
   imports = [ 
     ../wayland 
@@ -9,13 +12,27 @@
   ];
 
   home.packages = with pkgs; [
-        swayidle
         mako
         sirula
         sway-contrib.grimshot
         swaylock-effects
         playerctl
   ];
+
+  services.swayidle = {
+    enable = true;
+    events = [
+      { event = "before-sleep"; command = lock; }
+
+    ];
+
+    timeouts = [
+      { timeout = 30; command = lock; }
+      { timeout = 600; command = lock; }
+    ];
+
+  };
+
 
   programs.alacritty = {
     enable = true;
@@ -41,7 +58,7 @@
     term = "kitty";
     menu = "sirula";
     modepower = "(l) lock, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown";
-    lock = "swaylock -f --screenshots --clock --effect-blur 7x4 --effect-vignette 0.3:0.8";
+    
   in {
     
     enable = true;
