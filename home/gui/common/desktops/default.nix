@@ -5,6 +5,7 @@
 
 {
   imports = [
+    ./services
     ./aesthetic.nix
     ./terminal-emulator/kitty
   ];

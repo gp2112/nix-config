@@ -8,18 +8,13 @@
     enable = true;
     settings = {
 
-      
-      
-
       topBar = {
         layer = "top";
         position = "top";
         height = 30;
         spacing = 7;
-        
         modules-left = [ "sway/mode" "wlr/taskbar" ];
         modules-center = [ "clock" ];
-        
 
         clock = {
           format = "{:%H:%M %A %d/%m/%Y}";
@@ -47,12 +42,21 @@
         network = {
           interval = 5;
           format-wifi = "   {essid}";
-          format-disconnected = "睊 ";
+          format-ethernet = "";
+          format-disconnected = "";
         };
 
         backlight = {
           format = "{icon} {percent}%";
           format-icons = [ "" " " " " " " ];
+        };
+
+        memory = {
+          format = " {percentage}%";
+        };
+
+        disk = {
+          format = " {used}/{total}";
         };
 
       };

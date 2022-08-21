@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs,... }:
 
 {
   imports = [
@@ -35,7 +35,15 @@
     programs.waybar.settings = {
       topBar = {
         output = ["DP-2"];
-        modules-right = [ "pulseaudio" "network" "temperature" ];
+        modules-right = [ "custom/gpu" "disk" "memory" "pulseaudio" "network" "temperature" ];
+
+        "custom/gpu" = {
+          interval = 5;
+          format = "﴿ {}%";
+          exec = pkgs.writeShellScript "gpu" ''
+            cat /sys/class/graphics/fb0/device/gpu_busy_percent
+          '';
+        };
       };
 
       bottomBar = {
@@ -49,5 +57,4 @@
       exec sway
     end
   '';
-  
 }
