@@ -18,35 +18,25 @@
     alsa.enable = true;
     alsa.support32Bit = true;
   };
-  
   programs.xwayland.enable = true;
   security.polkit.enable = true;
-  
   environment.systemPackages = with pkgs; [
-    vim 
+    vim
     wget
     git
   ];
 
- 
   services.dbus.enable = true;
-  
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-
-  
-  security.pam.services.swaylock = {} ;
-  
+  security.pam.services.swaylock = {};
   networking.firewall.allowedTCPPortRanges = [ 
     {from = 1714; to = 1764;} # kde connect
   ];
-  networking.firewall.allowedUDPPortRanges = [ 
+  networking.firewall.allowedUDPPortRanges = [
     {from = 1714; to = 1764;} # kde connect
   ];
   networking.firewall.allowedTCPPorts = [ 8000 ];
-
-
-  
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

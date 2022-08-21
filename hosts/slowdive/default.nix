@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
   imports =
@@ -16,8 +16,8 @@
     networkmanager.enable = true;
   };
 
-  users.users.gui.extraGroups = [ 
-    "networkmanager" 
+  users.users.gui.extraGroups = [
+    "networkmanager"
   ];
 
   console.keyMap = "br-latin1-us";
@@ -29,7 +29,7 @@
       version = 2;
       efiSupport = true;
       enableCryptodisk = true;
-      device = "nodev";    
+      device = "nodev";
     };
   };
 
@@ -42,22 +42,21 @@
   };
 
   programs.xwayland.enable = true;
-  
-    
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim 
+    vim
     wget
     git
   ];
 
   security.pam.services.swaylock = {} ;
-  
-  networking.firewall.allowedTCPPortRanges = [ 
+
+  networking.firewall.allowedTCPPortRanges = [
     {from = 1714; to = 1764;} # kde connect
   ];
-  networking.firewall.allowedUDPPortRanges = [ 
+  networking.firewall.allowedUDPPortRanges = [
     {from = 1714; to = 1764;} # kde connect
   ];
   networking.firewall.allowedTCPPorts = [ 8000 ];
