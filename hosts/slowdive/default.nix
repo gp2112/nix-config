@@ -14,6 +14,7 @@
   networking = {
     hostName = "slowdive"; # Define your hostname.
     networkmanager.enable = true;
+    useDHCP = true;
   };
 
   users.users.gui.extraGroups = [
