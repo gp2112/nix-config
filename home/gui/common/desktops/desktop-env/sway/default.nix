@@ -4,9 +4,8 @@ let
   lock = "swaylock -f --screenshots --clock --effect-blur 7x4 --effect-vignette 0.3:0.8";
 
 in {
-  
-  imports = [ 
-    ../../wayland 
+  imports = [
+    ../../wayland
     ./waybar
     ../../terminal-emulator/kitty
   ];

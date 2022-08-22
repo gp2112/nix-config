@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
 
@@ -57,6 +57,14 @@
 
         disk = {
           format = " {used}/{total}";
+        };
+
+        bluetooth = {
+          format = " {status}";
+          format-connected = " {device_alias}";
+          format-connected-battery = " {device_alias} {device_battery_percentage}%";
+          on-click = "bluetoothctl power on";
+          on-click-right = "bluetoothctl power off";
         };
 
       };

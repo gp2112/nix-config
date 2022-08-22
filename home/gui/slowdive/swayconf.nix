@@ -30,7 +30,7 @@
   programs.waybar.settings = {
     topBar = {
       output = ["eDP-1"];
-      modules-right = [ "pulseaudio" "network" "backlight" "bluetooth" "temperature" "battery" ];
+      modules-right = [ "pulseaudio" "network" "memory" "backlight" "bluetooth" "temperature" "battery" ];
     };
 
     bottomBar = {
