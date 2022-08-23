@@ -33,6 +33,7 @@
     neofetch
     img-cat
     playerctl
+    obsidian
   ];
 
 }
