@@ -32,9 +32,7 @@ in {
   };
 
 
-  
-
-  wayland.windowManager.sway = 
+  wayland.windowManager.sway =
 
   let
     mod = "Mod4";
@@ -46,9 +44,9 @@ in {
     term = "kitty";
     menu = "sirula";
     modepower = "(l) lock, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown";
-    
+
   in {
-    
+
     enable = true;
 
     wrapperFeatures.gtk = true;
@@ -57,25 +55,24 @@ in {
       modifier = mod;
 
       terminal = term;
-      
       defaultWorkspace = "workspace number 1";
 
-      
+
       gaps = {
         inner = 6;
         outer = 10;
       };
 
-      
+
       bars = [{
         command = "waybar";
       }];
 
-      
+
       startup = [
         { command = "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK"; }
       ];
-     
+
 
       keybindings = {
         "${super}+p" = "exec grimshot copy area";
@@ -101,7 +98,11 @@ in {
          "${mod}+${left}" = "focus left";
          "${mod}+${down}" = "focus down";
          "${mod}+${up}" = "focus up";
-         "${mod}+${right} " = "focus right";
+         "${mod}+${right}" = "focus right";
+         "${mod}+Shift+${left}" = "move left";
+         "${mod}+Shift+${down}" = "move down";
+         "${mod}+Shift+${up}" = "move up";
+         "${mod}+Shift+${right} " = "move right";
          "${mod}+1" = "workspace number 1";
           "${mod}+2" = "workspace number 2";
           "${mod}+3" = "workspace number 3";
@@ -126,6 +127,7 @@ in {
           "${mod}+s" = "layout stacking";
           "${mod}+t" = "layout tabbed";
           "${mod}+e" = "layout toggle split";
+          "${mod}+f" = "floating toggle";
 
           "${mod}+Shift+r" = "mode resize";
           "${mod}+v" = "split v";
@@ -137,15 +139,15 @@ in {
       modes = {
         resize = {
           Down = "resize grow height 10 px";
-          Escape = "mode default"; 
-          Left = "resize shrink width 10 px"; 
-          Return = "mode default"; 
-          Right = "resize grow width 10 px"; 
-          Up = "resize shrink height 10 px"; 
-          h = "resize shrink width 10 px"; 
-          j = "resize grow height 10 px"; 
-          k = "resize shrink height 10 px"; 
-          l = "resize grow width 10 px"; 
+          Escape = "mode default";
+          Left = "resize shrink width 10 px";
+          Return = "mode default";
+          Right = "resize grow width 10 px";
+          Up = "resize shrink height 10 px";
+          h = "resize shrink width 10 px";
+          j = "resize grow height 10 px";
+          k = "resize shrink height 10 px";
+          l = "resize grow width 10 px";
         };
 
         modepower = {
@@ -160,7 +162,20 @@ in {
       };
 
 
+      floating.criteria = [
+        { title = "Picture-in-Picture"; }
+      ];
 
+      window.commands = [
+        {
+          criteria = { app_id = term; };
+          command = "opacity set 0.85";
+        }
+        {
+          criteria = { title = "Picture-in-Picture"; };
+          command = "resize set width 800 px height 500 px";
+        }
+      ];
 
 
     };
