@@ -164,12 +164,14 @@ in {
 
       floating.criteria = [
         { title = "Picture-in-Picture"; }
+        { title = "Write: .*"; }
+
       ];
 
       window.commands = [
         {
           criteria = { app_id = term; };
-          command = "opacity set 0.85";
+          command = "opacity set 0.75";
         }
         {
           criteria = { title = "Picture-in-Picture"; };

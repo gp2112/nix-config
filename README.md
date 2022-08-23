@@ -26,3 +26,9 @@ And a special thanks to [Misterio](https://github.com/Misterio77), for showing m
   * **Model:** 4
   * **RAM:** 8GB LDDR3
   * **Storage:** 32 GB SD Card + 1TB HDD USB
+
+## How to reproduce?
+
+It's very easy to reproduce my entire config in your machine!
+
+1. Download NixOS-Minimal
