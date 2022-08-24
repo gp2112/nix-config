@@ -1,6 +1,5 @@
 
-  { config, pkgs, lib, ... }:
-
+  { pkgs, ... }:
 {
   imports = [
     "${fetchTarball "https://github.com/NixOS/nixos-hardware/archive/936e4649098d6a5e0762058cb7687be1b2d90550.tar.gz" }/raspberry-pi/4"
@@ -23,7 +22,7 @@
     };
   };
   networking = {
-    hostName = hostname;
+    hostName = "rasp";
 
     nameservers = [ "8.8.8.8" "1.1.1.1" ];
     defaultGateway = "192.168.0.1";
