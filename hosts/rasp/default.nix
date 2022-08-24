@@ -25,6 +25,9 @@
   networking = {
     hostName = hostname;
 
+    nameservers = [ "8.8.8.8" "1.1.1.1" ];
+    defaultGateway = "192.168.0.1";
+
     interfaces.eth0 = {
   	  useDHCP = false;
 	  ipv4.addresses = [{

@@ -15,7 +15,7 @@
     hyprland.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, home-manager, hyprland, nixos-hardware, flake-utils, ... }@inputs:
+  outputs = { nixpkgs, home-manager, hyprland, flake-utils, ... }@inputs:
     let
       inherit (builtins) attrValues;
       inherit (flake-utils.lib) eachDefaultSystemMap;
@@ -91,7 +91,7 @@
           pkgs = packages.aarch64-linux;
         };
         "gui@frostbyte" = homeManagerConfiguration {
-          modules = [ ./home/gui/frostbyte ];
+          modules = [ ./home/gui/frostbyte ./modules/home-manager ];
           extraSpecialArgs = { inherit inputs; };
           pkgs = packages.x86_64-linux;
         };

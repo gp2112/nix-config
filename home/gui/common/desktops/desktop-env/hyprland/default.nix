@@ -1,10 +1,9 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  
-  imports = [ ../../common/wayland ./waybar];
+  imports = [ ../../wayland ./waybar];
 
-  home.packages = with pkgs;[ 
+  home.packages = with pkgs;[
     swaybg
     wofi
     swaylock-effects
@@ -28,8 +27,8 @@
       exec-once=waybar &
 
       input {
-          kb_layout=us
-          kb_variant=intl
+          kb_layout=br
+          kb_variant=abnt2
           kb_model=
           kb_options=
           kb_rules=
@@ -91,9 +90,7 @@
 
       monitor=HDMI-1,1920x1080@60,1920x0,1
 
-      
       submap=powermgt
-      
       bind=,s,exec,$reset && $lock & systemctl suspend
       bind=,h,exec,$reset && systemctl hibernate
       bind=,l,exec,$reset && $lock
@@ -110,9 +107,9 @@
       bind=SUPER,RETURN,exec,kitty
 
       # programs shortcut
-      bind=SUPERSHIFT,W,exec,firefox
+      bind=SHIFTSUPER,W,exec,firefox
 
-      bind=SUPERSHIFT,Q,killactive,
+      bind=SHIFTSUPER,Q,killactive,
       bind=SUPER,M,exit,
       bind=SUPER,E,exec,dolphin
       bind=SUPER,V,togglefloating,
@@ -135,15 +132,15 @@
       bind=SUPER,9,workspace,9
       bind=SUPER,0,workspace,10
 
-      bind=SUPERSHIFT,exclam,movetoworkspace,1
-      bind=SUPERSHIFT,at,movetoworkspace,2
-      bind=SUPERSHIFT,numbersign,movetoworkspace,3
-      bind=SUPERSHIFT,dollar,movetoworkspace,4
-      bind=SUPERSHIFT,percent,movetoworkspace,5
-      bind=SUPERSHIFT,asciicircum,movetoworkspace,6
-      bind=SUPERSHIFT,ampersand,movetoworkspace,7
-      bind=SUPERSHIFT,asterisk,movetoworkspace,8
-      bind=SUPERSHIFT,parentleft,movetoworkspace,9
-      bind=SUPERSHIFT,parentright,movetoworkspace,10'';
+      bind=SHIFTSUPER,exclam,movetoworkspace,1
+      bind=SHIFTSUPER,at,movetoworkspace,2
+      bind=SHIFTSUPER,numbersign,movetoworkspace,3
+      bind=SHIFTSUPER,dollar,movetoworkspace,4
+      bind=SHIFTSUPER,percent,movetoworkspace,5
+      bind=SHIFTSUPER,asciicircum,movetoworkspace,6
+      bind=SHIFTSUPER,ampersand,movetoworkspace,7
+      bind=SHIFTSUPER,asterisk,movetoworkspace,8
+      bind=SHIFTSUPER,parentleft,movetoworkspace,9
+      bind=SHIFTSUPER,parentright,movetoworkspace,10'';
   };
 }
