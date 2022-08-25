@@ -15,7 +15,7 @@
   };
 
   # dns servers
-  networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
+  networking.nameservers = [ "192.168.0.22" ];
 
   time.timeZone = "America/Sao_Paulo";
 
