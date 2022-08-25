@@ -30,4 +30,6 @@
 
   };
 
+  users.users.nginx.extraGroups = [ "nextcloud" ];
+
 }
