@@ -2,20 +2,31 @@
 
 {
 
-  services.nextcloud = {
-    enable = true;
-    home = "/data/nextcloud";
-    hostName = "cloud.guip.dev";
+  services = {
+    nextcloud = {
+      enable = true;
+      home = "/data/nextcloud";
+      hostName = "cloud.guip.dev";
 
-    maxUploadSize = "10G";
+      maxUploadSize = "10G";
 
-    https = true;
+      https = true;
 
-    config = {
-      adminuser = "gui";
-      adminpassFile = "/data/nextcloud/passwd";
-      dbtype = "sqlite";
+      config = {
+        adminuser = "gui";
+        adminpassFile = "/data/nextcloud/passwd";
+        dbtype = "sqlite";
+      };
     };
+    nginx.virtualHosts."cloud.guip.dev" = {
+      forceSSL = true;
+      enableACME = true;
+
+      locations."/" = {
+        root = "/data/nextcloud/";
+      };
+    };
+
 
   };
 
