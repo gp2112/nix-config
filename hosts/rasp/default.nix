@@ -10,6 +10,7 @@
 	    ./nginx
         ./git
         ./bind
+        ./nextcloud
 	];
 
   fileSystems = {

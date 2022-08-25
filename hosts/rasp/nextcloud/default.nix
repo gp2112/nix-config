@@ -1,18 +1,18 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
 
   services.nextcloud = {
     enable = true;
     home = "/data/nextcloud";
-    hostName = "cloud.guip.dev"
+    hostName = "cloud.guip.dev";
 
     maxUploadSize = "10G";
 
     https = true;
 
     config = {
-      adminuser = "gui"; 
+      adminuser = "gui";
       dbtype = "sqlite";
 
     }
