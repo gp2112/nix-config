@@ -9,6 +9,7 @@
 	    ./deluge.nix
 	    ./nginx
         ./git
+        ./bind
 	];
 
   fileSystems = {
