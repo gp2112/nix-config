@@ -25,16 +25,6 @@
       };
     };
 
-    "cloud.guip.dev" = {
-      forceSSL = true;
-      enableACME = true;
-
-      locations."/" = {
-        root = "/data/nextcloud/";
-      };
-
-    };
-
   };
 
 }
