@@ -15,7 +15,7 @@
       adminuser = "gui";
       dbtype = "sqlite";
 
-    }
+    };
 
   };
 
