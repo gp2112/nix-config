@@ -9,7 +9,6 @@
 	    ./deluge.nix
 	    ./nginx
         ./git
-        ./bind
         ./nextcloud
 	];
 

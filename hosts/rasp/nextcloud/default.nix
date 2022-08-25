@@ -23,7 +23,7 @@
       enableACME = true;
 
       locations."/" = {
-        root = "/data/nextcloud/";
+        root = "/data/nextcloud/data/";
       };
     };
 

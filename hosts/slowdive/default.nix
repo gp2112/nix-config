@@ -15,7 +15,7 @@
     hostName = "slowdive"; # Define your hostname.
     networkmanager.enable = true;
     useDHCP = true;
-    nameservers = [ "8.8.8.8" ];
+    nameservers = [ "8.8.8.8" "8.8.4.4" ];
   };
 
   users.users.gui.extraGroups = [

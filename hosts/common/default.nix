@@ -14,9 +14,6 @@
     font = "Lat2-Terminus16";
   };
 
-  # dns servers
-  networking.nameservers = [ "192.168.0.22" ];
-
   time.timeZone = "America/Sao_Paulo";
 
   fonts.fonts = with pkgs; [

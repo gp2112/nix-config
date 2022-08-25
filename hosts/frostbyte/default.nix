@@ -9,6 +9,8 @@
 
   networking = {
     hostName = "frostbyte"; # Define your hostname.
+    nameservers = [ "8.8.8.8" "8.8.4.4" ];
+
   };
 
   # Enable sound.
