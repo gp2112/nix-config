@@ -22,9 +22,6 @@
       forceSSL = true;
       enableACME = true;
 
-      locations."/" = {
-        root = "/data/nextcloud/data/";
-      };
     };
 
 
