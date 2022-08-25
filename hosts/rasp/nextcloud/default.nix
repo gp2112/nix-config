@@ -13,8 +13,8 @@
 
     config = {
       adminuser = "gui";
+      adminpassFile = "/data/nextcloud/passwd";
       dbtype = "sqlite";
-
     };
 
   };
