@@ -14,7 +14,6 @@
   networking = {
     hostName = "slowdive"; # Define your hostname.
     networkmanager.enable = true;
-    useDHCP = true;
     nameservers = [ "8.8.8.8" "8.8.4.4" ];
   };
 
@@ -66,6 +65,9 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
+  # if uses wayland
+  xdg.portal.wlr.enable = true;
 
   system.stateVersion = "21.11";
 
