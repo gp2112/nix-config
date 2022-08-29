@@ -34,6 +34,7 @@
     img-cat
     playerctl
     obsidian
+    gummi
   ];
 
 }
