@@ -13,7 +13,7 @@
       BandWidthRate = "2 MBits";
       Nickname = "guipbridge";
       ORPort = 9112;
-
+      ContactInfo = "me@guip.dev";
     };
 
   };

@@ -34,6 +34,8 @@
     img-cat
     playerctl
     obsidian
+    gummi
+    texlive.combined.scheme-full
   ];
 
 }
