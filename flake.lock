@@ -89,13 +89,36 @@
         "type": "github"
       }
     },
+    "querolerbot": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "utils": "utils_2"
+      },
+      "locked": {
+        "lastModified": 1662347882,
+        "narHash": "sha256-DdpMWD76Ye71yhcj9jVI/YJVKWy3iUDq5pC5djIbBeA=",
+        "owner": "gp2112",
+        "repo": "querolerbot",
+        "rev": "1c8564c0134df509e16f09db493b6e9d35037fcb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "gp2112",
+        "ref": "1.0.0-beta",
+        "repo": "querolerbot",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "nixos-hardware": "nixos-hardware",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "querolerbot": "querolerbot"
       }
     },
     "utils": {
@@ -105,6 +128,21 @@
         "owner": "numtide",
         "repo": "flake-utils",
         "rev": "1ed9fb1935d260de5fe1c2f7ee0ebaae17ed2fa1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "utils_2": {
+      "locked": {
+        "lastModified": 1659877975,
+        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
         "type": "github"
       },
       "original": {

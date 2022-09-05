@@ -20,5 +20,7 @@
     (nerdfonts.override { fonts = [ "FiraCode" "CascadiaCode" ]; })
   ];
 
+  environment.enableAllTerminfo = true;
+
 
 }

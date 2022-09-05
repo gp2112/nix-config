@@ -22,6 +22,19 @@
     alsa.enable = true;
     alsa.support32Bit = true;
   };
+
+  services.querolerbot = {
+    enable = true;
+    credentials = {
+      accessSecret = "3ikKn314TT3gHOFjfUbO6fzYfdVmkI1BbG18B3pYjPw8u";
+      accessKey = "1371527601316057100-ti3XwUhjOCvTAXVH1zhoKt12eQECXP";
+      token = "AAAAAAAAAAAAAAAAAAAAAIO3NgEAAAAAdFLD83I71g4a%2F6zZY37nnvK
+      rF4Q%3DFS14tnySEbuiCXwSCO9jVPVPlcGOGZP5kXGBCYYurDBPhczSIn";
+      consumerKey = "W4wENqongGPCU3XzScFgSePBz";
+      consumerSecret = "tH6nxWaB0vRCi2iohIGzRSzHNuTV0TB1cL3QNc8ZdUx7M1HwtV";
+    };
+  };
+
   programs.xwayland.enable = true;
   security.polkit.enable = true;
   environment.systemPackages = with pkgs; [

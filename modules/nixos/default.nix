@@ -3,5 +3,6 @@
 {
   imports = [
     # List your module files here
+    ./querolerbot
   ];
 }
