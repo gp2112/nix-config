@@ -34,6 +34,7 @@
     };
   };
 
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_5_19;
   # Enable sound.
   services.pipewire = {
     enable = true;
