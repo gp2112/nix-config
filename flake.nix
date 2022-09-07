@@ -59,8 +59,9 @@
           system = "x86_64-linux";
         };
         rasp = nixosSystem {
-          modules = [ 
+          modules = [
             ./hosts/rasp
+            querolerbot.nixosModules.default
           ];
           specialArgs = { inherit inputs; };
 
@@ -70,7 +71,6 @@
         frostbyte = nixosSystem {
           modules = [
             ./hosts/frostbyte
-            querolerbot.nixosModules.default
           ];
           specialArgs = { inherit inputs; };
 
