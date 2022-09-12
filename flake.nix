@@ -14,7 +14,7 @@
     hyprland.url = "github:hyprwm/Hyprland";
     hyprland.inputs.nixpkgs.follows = "nixpkgs";
 
-    querolerbot.url = "github:gp2112/querolerbot/1.0.0-beta";
+    querolerbot.url = "github:gp2112/querolerbot";
     querolerbot.inputs.nixpkgs.follows = "nixpkgs";
   };
 
