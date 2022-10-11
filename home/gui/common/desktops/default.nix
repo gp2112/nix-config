@@ -24,7 +24,6 @@
     sonixd
     evince
     spotify
-    zettlr
     pulseaudio
     ffmpeg
     libreoffice
@@ -35,7 +34,7 @@
     playerctl
     obsidian
     gummi
-    texlive.combined.scheme-full
+    virtualbox
   ];
 
 }
