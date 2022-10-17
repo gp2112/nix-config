@@ -7,6 +7,7 @@
       ../common
     ];
 
+
   networking = {
     hostName = "frostbyte"; # Define your hostname.
     nameservers = [ "8.8.8.8" "8.8.4.4" ];
@@ -30,6 +31,8 @@
     wget
     git
   ];
+
+  virtualisation.virtualbox.host.enable = true;
 
   services.dbus.enable = true;
   # Enable the OpenSSH daemon.
