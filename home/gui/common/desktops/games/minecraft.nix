@@ -2,8 +2,8 @@
 
 {
   home.packages = with pkgs; [
-    openjdk16-bootstrap 
-    polymc
+    openjdk16-bootstrap
+    prismlauncher
   ];
 
 }
