@@ -12,6 +12,8 @@
     hostName = "frostbyte"; # Define your hostname.
     nameservers = [ "8.8.8.8" "8.8.4.4" ];
 
+    interfaces.enp2s0.wakeOnLan.enable = true;
+
   };
 
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_5_19;
