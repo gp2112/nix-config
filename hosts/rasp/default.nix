@@ -49,13 +49,6 @@
 
     environment.systemPackages = with pkgs; [ vim wget git ];
 
-
-    services.openssh = {
-      enable = true;
-      permitRootLogin = "no";
-      passwordAuthentication = false;
-    };
-
     services.querolerbot = {
       enable = true;
     };

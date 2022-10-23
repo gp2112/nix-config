@@ -22,5 +22,10 @@
 
   environment.enableAllTerminfo = true;
 
+  services.openssh = {
+    enable = true;
+    permitRootLogin = "no";
+    passwordAuthentication = false;
+  };
 
 }
