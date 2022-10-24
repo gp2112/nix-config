@@ -16,6 +16,7 @@ in
 	    ./deluge.nix
 	    ./nginx
         ./git
+        ./openvpn.nix
         # ./nextcloud
 	];
 

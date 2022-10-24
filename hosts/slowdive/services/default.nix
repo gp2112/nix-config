@@ -11,6 +11,5 @@ All enabled services should be put in this list
     ./battery-threshold.nix
   ];
 
-  
 }
 

@@ -17,8 +17,8 @@
       };
     };
     nginx.virtualHosts."music.guip.dev" = {
-      forceSSL = true;
-      enableACME = true;
+      forceSSL = false;
+      enableACME = false;
 
       locations."/" = {
         proxyPass = "http://localhost:4533";

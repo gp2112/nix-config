@@ -7,8 +7,8 @@
   services.nginx.virtualHosts = {
 
     "pgp.guip.dev" = {
-      forceSSL = true;
-      enableACME = true;
+      forceSSL = false;
+      enableACME = false;
 
       locations."/" = {
         root = "/var/www/pgp.guip.dev/";

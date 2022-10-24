@@ -1,10 +1,9 @@
 { config, pkgs,... }:
 
 
-let   
+let
   BATTERY_DEVICE = "BAT0";
   MAXCHARGE = 98;
-           
 in {
   systemd.services.battery-charge-threshold = {
 
@@ -25,7 +24,6 @@ in {
         echo ${toString MAXCHARGE} > "/sys/class/power_supply/${BATTERY_DEVICE}/charge_control_end_threshold" 
         echo "Success! Device ${BATTERY_DEVICE} set to ${toString MAXCHARGE}"'';
 
-      
       wantedBy = [ "multi-user.target" ];
 
     };

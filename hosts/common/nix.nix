@@ -6,6 +6,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  environment.variables.NIX_SSHOPTS = "-t";
+
   nix = {
     enable = true;
 

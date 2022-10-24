@@ -26,4 +26,11 @@
     passwordAuthentication = false;
   };
 
+  programs.ssh.extraConfig = ''
+      Host rasp
+        HostName home.guip.dev
+        Port 2020
+        User gui
+  '';
+
 }
