@@ -50,7 +50,7 @@
     environment.systemPackages = with pkgs; [ vim wget git ];
 
     services.querolerbot = {
-      enable = true;
+      enable = false;
     };
 
     # Enable GPU acceleration
