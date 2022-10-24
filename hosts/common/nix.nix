@@ -13,7 +13,6 @@
 
     settings = {
       trusted-users = [ "@wheel" "nix-ssh" ];
-      auto-optimise-store = true;
     };
 
     sshServe = {

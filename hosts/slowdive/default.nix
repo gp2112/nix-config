@@ -35,6 +35,8 @@
   };
 
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_5_19;
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+
   # Enable sound.
   services.pipewire = {
     enable = true;
