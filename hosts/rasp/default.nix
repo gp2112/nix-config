@@ -1,8 +1,15 @@
 
-  { pkgs, ... }:
+{ pkgs, ... }:
+
+let
+  hardwarepkg = fetchTarball {
+    url = "https://github.com/NixOS/nixos-hardware/archive/936e4649098d6a5e0762058cb7687be1b2d90550.tar.gz";
+    sha256 = "06g0061xm48i5w7gz5sm5x5ps6cnipqv1m483f8i9mmhlz77hvlw"; 
+  };
+in
 {
   imports = [
-    "${fetchTarball "https://github.com/NixOS/nixos-hardware/archive/936e4649098d6a5e0762058cb7687be1b2d90550.tar.gz" }/raspberry-pi/4"
+    "${hardwarepkg}/raspberry-pi/4"
         ../common
         ./tor.nix
 		./navidrome.nix
