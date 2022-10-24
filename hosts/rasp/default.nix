@@ -33,7 +33,10 @@ in
     hostName = "rasp";
 
     nameservers = [ "8.8.8.8" "1.1.1.1" ];
-    defaultGateway = "192.168.0.1";
+    defaultGateway = {
+      address = "192.168.0.1";
+      interface = "eth0";
+    };
 
     interfaces.eth0 = {
   	  useDHCP = false;
