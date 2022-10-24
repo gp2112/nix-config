@@ -16,7 +16,7 @@ in
 	    ./deluge.nix
 	    ./nginx
         ./git
-        ./nextcloud
+        # ./nextcloud
 	];
 
   fileSystems = {
