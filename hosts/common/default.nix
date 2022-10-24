@@ -1,13 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./users.nix ];
-
-  nix.package = pkgs.nixUnstable;
-  nixpkgs.config.allowUnfree = true;
-  nix.extraOptions = ''
-    experimental-features = nix-command flakes
-  '';
+  imports = [
+    ./users.nix
+    ./nix.nix
+  ];
 
   i18n.defaultLocale = "en_US.UTF-8";
   console = {

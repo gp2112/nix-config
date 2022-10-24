@@ -4,7 +4,7 @@
 {
   users = {
     mutableUsers = false;
-    
+
     users.gui = {
       isNormalUser = true;
       hashedPassword = "$6$0pkRqHNzwEluhMz/$WVb0iiLiYz6avBxS0RgwrpTVsHTfsPEVPM17JjUvTQDFf3o3Q3FUrsGfLhLOMEEItR.Ph2ky56rPZVjpgBxWX0";
