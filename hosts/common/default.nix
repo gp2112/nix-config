@@ -20,6 +20,8 @@
     (nerdfonts.override { fonts = [ "FiraCode" "CascadiaCode" ]; })
   ];
 
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+
   environment.enableAllTerminfo = true;
 
   services.openssh = {
