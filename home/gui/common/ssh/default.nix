@@ -5,8 +5,8 @@
     enable = true;
     extraConfig = ''
       Host rasp
-        HostName 192.168.0.22
-        Port 22
+        HostName home.guip.dev
+        Port 2020
         User gui
     '';
   };
