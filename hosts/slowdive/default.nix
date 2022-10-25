@@ -9,12 +9,12 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../common
+      ../common/wifi.nix
       ./services
-      ./wireguard.nix
+      # ./wireguard.nix
     ];
   networking = {
     hostName = "slowdive"; # Define your hostname.
-    networkmanager.enable = true;
     nameservers = [ "8.8.8.8" "8.8.4.4" ];
   };
 
