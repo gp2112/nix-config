@@ -11,16 +11,12 @@
       ../common
       ../common/wifi.nix
       ./services
-      # ./wireguard.nix
+#      ./wireguard.nix
     ];
   networking = {
     hostName = "slowdive"; # Define your hostname.
     nameservers = [ "8.8.8.8" "8.8.4.4" ];
   };
-
-  users.users.gui.extraGroups = [
-    "networkmanager"
-  ];
 
   console.keyMap = "br-latin1-us";
 
@@ -47,6 +43,7 @@
   };
 
   programs.xwayland.enable = true;
+  security.polkit.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget

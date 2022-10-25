@@ -7,6 +7,15 @@ in
 {
   networking.firewall = {
     allowedUDPPorts = [ port ]; # Clients and peers can use the same port, see listenport
+    logReversePathDrops = true;
+    extraCommands = ''
+     ip46tables -t mangle -I nixos-fw-rpfilter -p udp -m udp --sport 51820 -j RETURN
+     ip46tables -t mangle -I nixos-fw-rpfilter -p udp -m udp --dport 51820 -j RETURN
+   '';
+   extraStopCommands = ''
+     ip46tables -t mangle -D nixos-fw-rpfilter -p udp -m udp --sport 51820 -j RETURN || true
+     ip46tables -t mangle -D nixos-fw-rpfilter -p udp -m udp --dport 51820 -j RETURN || true
+   '';
   };
   # Enable WireGuard
   networking.wireguard = {
@@ -15,7 +24,7 @@ in
       # "wg0" is the network interface name. You can name the interface arbitrarily.
       wg0 = {
         # Determines the IP address and subnet of the client's end of the tunnel interface.
-        ips = [ "10.100.0.3/24" ];
+        ips = [ "10.100.0.2/24" ];
         listenPort = port; # to match firewall allowedUDPPorts (without this wg uses random port numbers)
 
         # Path to the private key file.
