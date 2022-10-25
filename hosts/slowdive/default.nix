@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ../common
       ./services
+      ./wireguard.nix
     ];
   networking = {
     hostName = "slowdive"; # Define your hostname.

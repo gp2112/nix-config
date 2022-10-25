@@ -3,7 +3,7 @@
 
 let
   interface = "eth0";
-  port = 51820;
+  port = 1194;
 in
 {
 
