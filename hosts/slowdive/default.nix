@@ -11,7 +11,7 @@
       ../common
       ../common/wifi.nix
       ./services
-#      ./wireguard.nix
+      ./wireguard.nix
     ];
   networking = {
     hostName = "slowdive"; # Define your hostname.

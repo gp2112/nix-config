@@ -16,7 +16,7 @@ in
 	    ./deluge.nix
 	    ./nginx
         ./git
-        # ./wireguard.nix
+        ./wireguard.nix
         # ./nextcloud
 	];
 
@@ -58,7 +58,7 @@ in
     };
   };
 
-    environment.systemPackages = with pkgs; [ vim wget git ];
+    environment.systemPackages = with pkgs; [ vim wget git nmap wakelan ];
 
     services.querolerbot = {
       enable = false;
