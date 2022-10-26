@@ -42,9 +42,9 @@ in
             publicKey = "fyKDuiSYu9YvPRdROYMRV3j7yVtQdn6A2JdZloIu9hU=";
 
             # Forward all the traffic via VPN.
-            allowedIPs = [ "0.0.0.0/0" ];
+            # allowedIPs = [ "0.0.0.0/0" ];
             # Or forward only particular subnets
-            #allowedIPs = [ "10.100.0.1" "91.108.12.0/22" ];
+            allowedIPs = [ "10.100.0.1/24" ];
 
             # Set this to the server IP and port.
             endpoint = "${serverIP}:${toString port}"; # ToDo: route to endpoint not automatically configured https://wiki.archlinux.org/index.php/WireGuard#Loop_routing https://discourse.nixos.org/t/solved-minimal-firewall-setup-for-wireguard-client/7577
