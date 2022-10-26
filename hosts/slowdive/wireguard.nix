@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  serverIP = "home.guip.dev";
+  serverIP = "186.223.220.181";
   port = 1194;
 in
 {
