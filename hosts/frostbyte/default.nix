@@ -16,7 +16,7 @@
 
   };
 
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_5_19;
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_0;
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
 
