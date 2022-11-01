@@ -13,6 +13,16 @@
         priority = 4;
       };
 
+      "SOLIS 5G" = {
+        pskRaw = "@PSK_SOLIS@";
+        priority = 2;
+      };
+
+      "SOLIS 2G" = {
+        pskRaw = "@PSK_SOLIS@";
+        priority = 1;
+      };
+
       LoL = {
         pskRaw = "@PSK_LoL@";
         priority = 5;
