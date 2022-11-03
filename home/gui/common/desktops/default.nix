@@ -34,7 +34,6 @@
     playerctl
     obsidian
     gummi
-    virtualbox
   ];
 
 }
