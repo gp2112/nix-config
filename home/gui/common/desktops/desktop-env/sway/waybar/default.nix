@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 
 {
 
@@ -76,14 +76,12 @@
         width = 400;
         modules-left = [ "sway/window" ];
         modules-center = [ "sway/workspaces" ];
-        margin-left = 5;
 
         "sway/workspaces" = {
           format = "  {index}  ";
         };
 
       };
-
     };
   };
 }
