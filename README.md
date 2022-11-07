@@ -29,6 +29,12 @@ And a special thanks to [Misterio](https://github.com/Misterio77), for showing m
 
 ## How to reproduce?
 
-It's very easy to reproduce my entire config in your machine!
+It's very easy to reproduce my entire config in your machine using NixOS!
 
-1. Download NixOS-Minimal
+### NixOS Configure (system):
+
+`sudo nixos-rebuild switch --flake github:gp2112/nix-config#HOSTNAME`
+
+### Home Manager Config:
+
+`home-manager switch --flake github:gp2112/nix-config#USER@HOSTNAME`
