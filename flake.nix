@@ -49,8 +49,8 @@
       nixosConfigurations = {
         slowdive = nixosSystem {
           # Configuração
-          modules = [ 
-            ./hosts/slowdive 
+          modules = [
+            ./hosts/slowdive
           ];
           # Repassar nossos inputs, para permitir referenciar da config
           specialArgs = { inherit inputs; };

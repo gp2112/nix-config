@@ -5,6 +5,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../common
+      ./audio.nix
     ];
 
 
@@ -18,15 +19,6 @@
 
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_0;
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
-
-
-  # Enable sound.
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-  };
 
   programs.xwayland.enable = true;
   security.polkit.enable = true;
