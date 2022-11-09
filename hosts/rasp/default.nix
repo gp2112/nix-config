@@ -35,14 +35,14 @@ in
 
     nameservers = [ "8.8.8.8" "1.1.1.1" ];
     defaultGateway = {
-      address = "192.168.0.1";
+      address = "192.168.1.1";
       interface = "eth0";
     };
 
     interfaces.eth0 = {
   	  useDHCP = false;
 	  ipv4.addresses = [{
-        address = "192.168.0.22";
+        address = "192.168.1.22";
         prefixLength = 24;
       }];
 	  ipv6.addresses = [{
