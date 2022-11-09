@@ -11,16 +11,10 @@
     pulse.enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
-
+    jack.enable = true;
   };
 
-  services.jack = {
-    jackd.enable = true;
-    alsa = {
-      enable = true;
-      support32Bit = true;
-    };
-  };
+  
 
   environment.systemPackages = with pkgs; [ libjack2 jack2 qjackctl jack_capture ];
 
