@@ -4,6 +4,7 @@
 
   services.tor = {
     enable = true;
+    openFirewall = true;
     relay = {
       enable = true;
       role = "bridge";

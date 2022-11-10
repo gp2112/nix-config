@@ -11,5 +11,6 @@
     recommendedTlsSettings = true;
   };
 
+  networking.firewall.allowedTCPPorts = [ 22 80 ];
 
 }

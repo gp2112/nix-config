@@ -18,4 +18,6 @@
     authFile = "/var/deluge/auth";
   };
 
+  networking.firewall.allowedTCPPorts = [ 58846 ];
+
 }
