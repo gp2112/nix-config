@@ -15,6 +15,7 @@ in {
         sirula
         sway-contrib.grimshot
         swaylock-effects
+        autotiling
   ];
 
   services.swayidle = {
@@ -71,6 +72,7 @@ in {
 
       startup = [
         { command = "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK"; }
+        { command = "autotiling"; }
       ];
 
 
@@ -92,6 +94,7 @@ in {
         "XF86Search" = "exec ${menu}";
         "${mod}+d" = "exec ${menu}";
         "${mod}+Return" = "exec ${term}";
+        "${mod}+Shift+Return" = "exec ${term} --class=${term}float";
         "${mod}+Shift+q" = "kill";
         "${mod}+Shift+c" = "reload";
         "${mod}+Shift+e" = "exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'";
@@ -166,6 +169,7 @@ in {
       floating.criteria = [
         { title = "Picture-in-Picture"; }
         { title = "Write: .*"; }
+        { app_id = "${term}float"; }
 
       ];
 
@@ -173,6 +177,10 @@ in {
         {
           criteria = { app_id = term; };
           command = "opacity set 0.75";
+        }
+        {
+          criteria = { app_id = "${term}float"; };
+          command = "resize set width 650 px height 500 px, position 1000x800";
         }
         {
           criteria = { title = "Picture-in-Picture"; };
