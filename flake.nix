@@ -4,6 +4,7 @@
   inputs = {
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-22.05";
     nixos-hardware.url = "github:nixos/nixos-hardware/master";
 
     flake-utils.url = "github:numtide/flake-utils";
@@ -18,11 +19,10 @@
     querolerbot.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, home-manager, hyprland, flake-utils, querolerbot, ... }@inputs:
+  outputs = { nixpkgs, nixpkgs-stable, home-manager, hyprland, flake-utils, querolerbot, ... }@inputs:
     let
       inherit (builtins) attrValues;
       inherit (flake-utils.lib) eachDefaultSystemMap;
-      inherit (nixpkgs.lib) nixosSystem;
       inherit (home-manager.lib) homeManagerConfiguration;
     in
     rec {
@@ -43,11 +43,19 @@
           overlays = attrValues overlays;
           config.allowUnfree = true;
         }
+        );
+
+      packages-stable = eachDefaultSystemMap (system:
+        import nixpkgs-stable {
+          inherit system;
+          overlays = attrValues overlays;
+          config.allowUnfree = true;
+        }
       );
 
       # Configurações NixOS
       nixosConfigurations = {
-        slowdive = nixosSystem {
+        slowdive = nixpkgs.lib.nixosSystem {
           # Configuração
           modules = [
             ./hosts/slowdive
@@ -58,17 +66,17 @@
           pkgs = packages.x86_64-linux;
           system = "x86_64-linux";
         };
-        rasp = nixosSystem {
+        rasp = nixpkgs-stable.lib.nixosSystem {
           modules = [
             ./hosts/rasp
             querolerbot.nixosModules.default
           ];
           specialArgs = { inherit inputs; };
 
-          pkgs = packages.aarch64-linux;
+          pkgs = packages-stable.aarch64-linux;
           system = "aarch64-linux";
         };
-        frostbyte = nixosSystem {
+        frostbyte = nixpkgs.lib.nixosSystem {
           modules = [
             ./hosts/frostbyte
           ];
