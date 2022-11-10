@@ -22,6 +22,7 @@
     };
   };
 
+  hardware.bluetooth.powerOnBoot = false;
 
   fileSystems."/" = {
     device = "/dev/mapper/vg-root";
