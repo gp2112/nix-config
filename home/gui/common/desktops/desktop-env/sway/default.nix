@@ -180,7 +180,7 @@ in {
         }
         {
           criteria = { app_id = "${term}float"; };
-          command = "resize set width 650 px height 500 px, position 1000x800";
+          command = "resize set width 700 px height 450 px, move position 1000 200";
         }
         {
           criteria = { title = "Picture-in-Picture"; };
