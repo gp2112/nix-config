@@ -5,6 +5,7 @@
   imports = [
         inputs.nixos-hardware.nixosModules.raspberry-pi-4
         ../common
+        ../common/wifi.nix
         ./tor.nix
 		./navidrome.nix
 	    ./deluge.nix
@@ -33,18 +34,6 @@
       interface = "eth0";
     };
 
-    interfaces.eth0 = {
-  	  useDHCP = false;
-	  ipv4.addresses = [{
-        address = "192.168.1.22";
-        prefixLength = 24;
-      }];
-	  ipv6.addresses = [{
-	    address = "2804:14d:8084:8880::5";
-        prefixLength = 64;
-      }];
-    };
-
     firewall = {
       enable = true;
       allowedTCPPorts = [ 22 80 443 9112 36347 38803 4533 58846 6881 9954 ];
@@ -53,10 +42,6 @@
   };
 
     environment.systemPackages = with pkgs; [ vim wget git nmap wakelan ];
-
-    services.querolerbot = {
-      enable = false;
-    };
 
     # Enable GPU acceleration
     hardware.raspberry-pi."4".fkms-3d.enable = true;

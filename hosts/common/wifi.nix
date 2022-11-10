@@ -13,6 +13,11 @@
         priority = 4;
       };
 
+      ACAB2 = {
+        pskRaw = "@PSK_ACAB2@";
+        priority = 2;
+      };
+
       "SOLIS 5G" = {
         pskRaw = "@PSK_SOLIS@";
         priority = 2;
