@@ -12,7 +12,8 @@
 	    ./nginx
         ./git
         ./wireguard.nix
-        # ./nextcloud
+        ./nextcloud
+        # ./postgresql.nix
 	];
 
   fileSystems = {
@@ -31,7 +32,7 @@
     nameservers = [ "8.8.8.8" "1.1.1.1" ];
     defaultGateway = {
       address = "192.168.1.1";
-      interface = "eth0";
+      interface = "wlan0";
     };
 
     firewall = {
@@ -39,6 +40,7 @@
       allowedTCPPorts = [ 22 ];
       allowedUDPPorts = [  ];
     };
+
   };
 
     environment.systemPackages = with pkgs; [ vim wget git nmap wakelan ];

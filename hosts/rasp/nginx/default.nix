@@ -11,6 +11,6 @@
     recommendedTlsSettings = true;
   };
 
-  networking.firewall.allowedTCPPorts = [ 22 80 ];
+  networking.firewall.allowedTCPPorts = [ 443 80 ];
 
 }
