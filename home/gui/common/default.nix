@@ -12,9 +12,6 @@
     htop
     python3
     gcc
-    go
-    nodejs
-    rustc
     nettools
   ];
 
