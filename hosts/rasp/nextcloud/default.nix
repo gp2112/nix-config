@@ -29,12 +29,20 @@
       ensureDatabases = [ "nextcloud" ];
     };
 
-    nginx.virtualHosts."cloud.guip.dev" = {
-      forceSSL = true;
-      enableACME = true;
+    nginx.virtualHosts = {
+      "cloud.guip.dev" = {
+        forceSSL = true;
+        enableACME = true;
+      };
 
+      "files.guip.dev" = {
+        forceSSL = true;
+        enableACME = true;
+        locations."/" = {
+          return = "303 https://cloud.guip.dev/s/dHW8zYbwibByBse";
+        };
+      };
     };
-
   };
 
   users.users.nginx.extraGroups = [ "nextcloud" ];

@@ -5,6 +5,7 @@
 
   services.nginx = {
     enable = true;
+    resolver.addresses = [ "[::1]" "8.8.8.8" ];
     recommendedGzipSettings = true;
     recommendedOptimisation = true;
     recommendedProxySettings = true;
