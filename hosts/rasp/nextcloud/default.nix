@@ -45,6 +45,9 @@
     };
   };
 
-  users.users.nginx.extraGroups = [ "nextcloud" ];
+  users.users = {
+    nginx.extraGroups = [ "nextcloud" ];
+    nextcloud.extraGroups = [ "deluge" ];
+  };
 
 }
