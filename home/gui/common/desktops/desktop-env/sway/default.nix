@@ -170,6 +170,7 @@ in {
         { title = "Picture-in-Picture"; }
         { title = "Write: .*"; }
         { app_id = "${term}float"; }
+        { instance = "origin.exe"; }
 
       ];
 
