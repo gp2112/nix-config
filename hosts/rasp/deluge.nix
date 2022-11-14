@@ -19,5 +19,6 @@
   };
 
   networking.firewall.allowedTCPPorts = [ 58846 ];
+  users.users.gui.extraGroups = [ "deluge" ];
 
 }
