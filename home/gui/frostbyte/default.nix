@@ -4,6 +4,7 @@
     ../common
     ../common/desktops
     ../common/desktops/games
+    ../common/desktops/desktop-env/plasma
     ./multimidia
   ];
 

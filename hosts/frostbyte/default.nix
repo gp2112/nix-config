@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
       ../common
       ./audio.nix
+      ./plasma.nix
     ];
 
 
