@@ -9,20 +9,18 @@
     ];
 
   boot.loader.efi.canTouchEfiVariables = true;
-  
-  boot.initrd = {
-      availableKernelModules = [ "ahci" "xhci_pci" "sd_mod" ];
-      kernelModules = [ ];
-  };
 
-  boot.initrd.luks.devices = {
-    crypted = {
-      device = "/dev/disk/by-label/luks";
-      preLVM = true;
+  boot.initrd = {
+    availableKernelModules = [ "ahci" "xhci_pci" "sd_mod" ];
+    kernelModules = [ ];
+    luks.devices = {
+      crypted = {
+        device = "/dev/disk/by-label/luks";
+        preLVM = true;
+      };
     };
   };
 
-  hardware.bluetooth.powerOnBoot = false;
 
   fileSystems."/" = {
     device = "/dev/mapper/vg-root";
@@ -34,17 +32,21 @@
   };
 
 
-  swapDevices = [ 
+  swapDevices = [
     { device = "/dev/mapper/vg-swap"; }
   ];
 
   networking.interfaces.wlp2s0.useDHCP = lib.mkDefault true;
 
-  hardware.bluetooth.enable = true;
+  hardware = {
+    bluetooth = {
+      enable = true;
+      powerOnBoot = false;
+    };
 
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-
-  hardware.opengl.enable = true;
+    cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+    opengl.enable = true;
+  };
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
