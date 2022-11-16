@@ -2,6 +2,11 @@
 
 {
   imports = [
-    ../wayland
+    ../../wayland
   ];
+
+  home.packages = with pkgs; [
+    layan-kde
+  ];
+
 }
