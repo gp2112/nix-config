@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
       ../common
       ./audio.nix
+      ./plasma.nix
     ];
 
 
@@ -19,6 +20,8 @@
 
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_0;
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+
+  console.keyMap = "br-abnt";
 
   programs.xwayland.enable = true;
   security.polkit.enable = true;
