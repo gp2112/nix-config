@@ -35,6 +35,7 @@
     obsidian
     gummi
     tor-browser-bundle-bin
+    arduino
 
     (pkgs.writeShellScriptBin "rasptunnel" ''
       ssh -D 8888 gui@home.guip.dev -p 2020
