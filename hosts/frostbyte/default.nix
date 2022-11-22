@@ -7,6 +7,7 @@
       ../common
       ./audio.nix
       ./plasma.nix
+      ./services
     ];
 
 
@@ -33,7 +34,10 @@
 
   virtualisation.virtualbox.host.enable = true;
 
-  services.dbus.enable = true;
+  services = {
+    dbus.enable = true;
+  };
+
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
   security.pam.services.swaylock = {};
