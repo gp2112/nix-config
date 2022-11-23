@@ -11,10 +11,12 @@
     };
 
     settings = {
-      BandWidthRate = "2 MBits";
+      BridgeRelay = true;
+      BandWidthRate = "3 MBytes";
       Nickname = "guipbridge";
       ORPort = 9112;
       ContactInfo = "me@guip.dev";
+      ExitRelay = false;
     };
 
   };
