@@ -7,14 +7,14 @@
 
   environment.systemPackages = with pkgs; [ vim wget git ];
 
+  networking = {
+    hostName = "sputnik";
+  };
+
   fileSystems = {
       "/" = {
-        device = "/dev/disk/by-label/nixos";
-        fsType = "ext4";
-      };
-
-      "/boot" = {
-        device = "/dev/disk/by-label/boot";
+        device = "/dev/disk/by-label/root";
+        fsType = "btrfs";
       };
   };
 
@@ -22,6 +22,7 @@
 
   boot.loader.grub = {
     enable = true;
+    device = "/dev/vda";
   };
 
   swapDevices = [
