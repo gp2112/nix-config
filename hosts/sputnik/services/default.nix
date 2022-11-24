@@ -2,7 +2,6 @@
 
 {
   imports = [
-    # ./mastodon
-    ./reverseproxy.nix
+    ./mastodon
   ];
 }
