@@ -86,7 +86,7 @@
           system = "x86_64-linux";
 
         };
-        rasp = nixpkgs-stable.lib.nixosSystem {
+        sputnik = nixpkgs-stable.lib.nixosSystem {
           modules = [
             ./hosts/sputnik
             querolerbot.nixosModules.default
