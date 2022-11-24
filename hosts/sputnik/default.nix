@@ -20,7 +20,7 @@
 
   console.keyMap = "br-abnt";
 
-  boot.loader.systemd-boot = {
+  boot.loader.grub = {
     enable = true;
   };
 
