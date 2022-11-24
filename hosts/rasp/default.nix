@@ -13,7 +13,6 @@
         ./git
         # ./wireguard.nix
         ./nextcloud
-        ./mastodon
 	];
 
   fileSystems = {
