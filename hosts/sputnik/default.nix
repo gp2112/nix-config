@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs, config, ... }:
 
 {
   imports = [
@@ -9,7 +9,11 @@
 
   networking = {
     hostName = "sputnik";
+    useDHCP = true;
   };
+
+  virtualisation.hypervGuest.enable = true;
+  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   fileSystems = {
       "/" = {
@@ -20,9 +24,15 @@
 
   console.keyMap = "br-abnt";
 
-  boot.loader.grub = {
-    enable = true;
-    device = "/dev/vda";
+  boot = {
+    loader.grub = {
+      enable = true;
+      device = "/dev/vda";
+    };
+    initrd.availableKernelModules = [
+      "ahci" "xhci_pci" "virtio_pci"
+      "sr_mod" "virtio_blk"
+    ];
   };
 
   swapDevices = [
