@@ -3,6 +3,7 @@
 {
   imports = [
     ../common
+    ./services
   ];
 
   environment.systemPackages = with pkgs; [ vim wget git ];
@@ -14,6 +15,8 @@
 
   virtualisation.hypervGuest.enable = true;
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+
+  networking.firewall.allowedTCPPorts = [ 22 ];
 
   fileSystems = {
       "/" = {

@@ -1,7 +1,8 @@
-{}:
+{ ... }:
 
 {
   imports = [
-    ./nginx.nix
+    # ./mastodon
+    ./reverseproxy.nix
   ];
 }
