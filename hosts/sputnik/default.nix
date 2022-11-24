@@ -1,4 +1,4 @@
-{ lib, pkgs, nixpkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
   imports = [
@@ -27,8 +27,6 @@
   swapDevices = [
     { device = "/dev/disk/by-label/swap"; }
   ];
-
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
   system.stateVersion = "22.05";
 }
