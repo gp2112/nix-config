@@ -13,7 +13,7 @@
 
   fileSystems = {
       "/" = {
-        device = "/dev/disk/by-label/root";
+        device = "/dev/vda1";
         fsType = "btrfs";
       };
   };
@@ -26,7 +26,7 @@
   };
 
   swapDevices = [
-    { device = "/dev/disk/by-label/swap"; }
+    { device = "/dev/vda2"; }
   ];
 
   system.stateVersion = "22.05";
