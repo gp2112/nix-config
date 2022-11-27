@@ -86,16 +86,6 @@
           system = "x86_64-linux";
 
         };
-        sputnik = nixpkgs-stable.lib.nixosSystem {
-          modules = [
-            ./hosts/sputnik
-            querolerbot.nixosModules.default
-          ];
-          specialArgs = { inherit inputs; };
-
-          pkgs = packages-stable.x86_64-linux;
-          system = "x86_64-linux";
-        };
       };
 
       homeConfigurations = {
