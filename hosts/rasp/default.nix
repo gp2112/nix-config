@@ -41,7 +41,7 @@
         prefixLength = 24;
       }];
       ipv6.addresses = [{
-        address = "2804:2894:f0d1:9400::4:1";
+        address = "2804:2894:f0c9:8c00::4:1";
         prefixLength = 64;
       }];
     };
