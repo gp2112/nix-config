@@ -36,7 +36,6 @@
     gummi
     tor-browser-bundle-bin
     arduino
-    gparted
 
     (pkgs.writeShellScriptBin "rasptunnel" ''
       ssh -D 8888 gui@home.guip.dev -p 2020
