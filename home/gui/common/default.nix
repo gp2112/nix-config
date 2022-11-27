@@ -13,6 +13,7 @@
     python3
     gcc
     nettools
+    lfs
   ];
 
   home.stateVersion = "22.05";
