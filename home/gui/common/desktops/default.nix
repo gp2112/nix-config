@@ -8,6 +8,7 @@
     ./services
     ./aesthetic.nix
     ./terminal-emulator/kitty
+    ./thunderbird
   ];
 
   home.packages = with pkgs; [
