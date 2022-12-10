@@ -10,7 +10,7 @@
     };
     layout = "br";
 
-    gdm = {
+    displayManager.gdm = {
       enable = true;
       wayland = true;
     };
