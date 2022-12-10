@@ -3,13 +3,16 @@
 {
 
   services.xserver = {
-    enable = true;
-    displayManager.sddm.enable = true;
+    enable = false;
+
     desktopManager.plasma5 = {
       enable = true;
     };
-
     layout = "br";
 
+    gdm = {
+      enable = true;
+      wayland = true;
+    };
   };
 }
