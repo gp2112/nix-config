@@ -11,6 +11,13 @@
     font = "Lat2-Terminus16";
   };
 
+  environment.systemPackages = with pkgs; [
+    vim htop
+    wget curl
+    git
+    zip unzip
+  ];
+
   time.timeZone = "America/Sao_Paulo";
 
   fonts.fonts = with pkgs; [

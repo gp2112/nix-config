@@ -49,12 +49,7 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    vim
-    wget
-    git
-  ];
-
+  
   security.pam.services.swaylock = {} ;
 
   networking.firewall.allowedTCPPortRanges = [
@@ -72,7 +67,7 @@
   # if uses wayland
   xdg.portal.wlr.enable = true;
 
-  system.stateVersion = "21.11";
+  system.stateVersion = "22.11";
 
 }
 
