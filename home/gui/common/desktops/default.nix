@@ -32,7 +32,7 @@
     neofetch
     img-cat
     playerctl
-    obsidian
+    marktext
     gummi
     tor-browser-bundle-bin
     arduino
