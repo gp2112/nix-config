@@ -13,6 +13,7 @@
         ./git
         # ./wireguard.nix
         ./nextcloud
+        ./nfs.nix
 	];
 
   fileSystems = {
