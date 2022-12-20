@@ -33,6 +33,11 @@
         priority = 5;
       };
 
+      CAASO = {
+        pskRaw = "@PSK_CAASO@";
+        priority = 2;
+      };
+
       eduroam = {
         auth = ''
           key_mgmt=WPA-EAP
