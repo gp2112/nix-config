@@ -15,6 +15,7 @@
     pavucontrol
     thunderbird
     tdesktop
+    element-desktop
     qbittorrent
     vlc
     keepassxc
