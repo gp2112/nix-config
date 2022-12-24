@@ -38,6 +38,11 @@
         priority = 2;
       };
 
+      "Guilherme 43 Nova" = {
+        pskRaw = "@PSK_Guilherme43Nova@";
+        priority = 2;
+      };
+
       eduroam = {
         auth = ''
           key_mgmt=WPA-EAP
