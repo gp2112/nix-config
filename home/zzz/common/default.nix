@@ -6,5 +6,12 @@
     pavucontrol
     neofetch
     playerctl
+    curl
+    nettools
   ];
+
+  programs = {
+    home-manager.enable = true;
+  };
+
 }
