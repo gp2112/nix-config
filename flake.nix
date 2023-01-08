@@ -103,12 +103,17 @@
           extraSpecialArgs = { inherit inputs; };
           pkgs = packages.aarch64-linux;
         };
+
         "gui@frostbyte" = homeManagerConfiguration {
           modules = [ ./home/gui/frostbyte ./modules/home-manager ];
           extraSpecialArgs = { inherit inputs; };
           pkgs = packages.x86_64-linux;
         };
 
+        "zzz@frostbyte" = homeManagerConfiguration {
+          modules = [ ./home/zzz/frostbyte ./modules/home-manager ];
+          pkgs = packages.x86_64-linux;
+        };
       };
     };
 }
