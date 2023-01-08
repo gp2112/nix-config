@@ -10,9 +10,5 @@
     };
     layout = "br";
 
-    displayManager.gdm = {
-      enable = true;
-      wayland = true;
-    };
   };
 }
