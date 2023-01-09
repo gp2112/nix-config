@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ./fish
+  ];
 
   home = {
     username = "zzz";
