@@ -15,6 +15,8 @@
     thunderbird
     tdesktop
     keepassxc
+    minecraft
+    spotify
   ];
 
   programs.fish.shellInit = ''
