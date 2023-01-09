@@ -1,6 +1,13 @@
 { pkgs, ... }:
 
 {
+
+  home = {
+    username = "zzz";
+    stateVersion = "22.11";
+    homeDirectory = "/home/zzz";
+  };
+
   home.packages = with pkgs; [
     htop
     pavucontrol
