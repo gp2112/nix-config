@@ -3,6 +3,7 @@
 {
   imports = [
     ./fish
+    ./wayland
   ];
 
   home = {
