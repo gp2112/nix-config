@@ -14,6 +14,7 @@
     tdesktop
     keepassxc
     spotify
+    vlc
   ];
 
   programs.fish.shellInit = ''
