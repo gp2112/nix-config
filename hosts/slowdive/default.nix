@@ -69,5 +69,11 @@
 
   system.stateVersion = "22.11";
 
+  # Available Desktop Environs
+  services.xserver = {
+    enable = false;
+    desktopManager.plasma5.enable = true;
+  };
+
 }
 
