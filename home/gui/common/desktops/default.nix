@@ -38,6 +38,7 @@
     tor-browser-bundle-bin
     arduino
     sublime-music
+    gparted
 
     (pkgs.writeShellScriptBin "rasptunnel" ''
       ssh -D 8888 gui@home.guip.dev -p 2020
