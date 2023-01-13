@@ -11,6 +11,7 @@
   home.packages = with pkgs; [
     monero-gui
     qt6.qtwebsockets
+    libsForQt5.kcalc
   ];
 
   programs.fish.shellInit = ''
