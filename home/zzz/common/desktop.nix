@@ -15,6 +15,7 @@
     keepassxc
     spotify
     vlc
+    qbittorrent
   ];
 
   programs.fish.shellInit = ''
