@@ -24,6 +24,7 @@
     (nerdfonts.override { fonts = [ "FiraCode" "CascadiaCode" ]; })
   ];
 
+  services.usbmuxd.enable = true;
 
   environment.enableAllTerminfo = true;
 

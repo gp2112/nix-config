@@ -7,7 +7,6 @@
   imports = [
     ./services
     ./aesthetic.nix
-    ./terminal-emulator/kitty
   ];
 
   home.packages = with pkgs; [
@@ -37,7 +36,6 @@
     gummi
     tor-browser-bundle-bin
     arduino
-    sublime-music
     gparted
 
     (pkgs.writeShellScriptBin "rasptunnel" ''
