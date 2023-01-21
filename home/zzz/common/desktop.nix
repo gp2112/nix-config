@@ -16,6 +16,7 @@
     spotify
     vlc
     qbittorrent
+    krita
   ];
 
   programs.fish.shellInit = ''
