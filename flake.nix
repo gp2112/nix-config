@@ -109,19 +109,6 @@
           extraSpecialArgs = { inherit inputs; };
           pkgs = packages.x86_64-linux;
         };
-
-        "zzz@frostbyte" = homeManagerConfiguration {
-          modules = [ ./home/zzz/frostbyte ./modules/home-manager ];
-          extraSpecialArgs = { inherit inputs; };
-          pkgs = packages.x86_64-linux;
-        };
-
-        "zzz@slowdive" = homeManagerConfiguration {
-          modules = [ ./home/zzz/slowdive ./modules/home-manager ];
-          extraSpecialArgs = { inherit inputs; };
-          pkgs = packages.x86_64-linux;
-        };
-
       };
     };
 }
