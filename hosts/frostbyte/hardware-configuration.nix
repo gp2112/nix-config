@@ -35,18 +35,14 @@
         device = "/dev/disk/by-label/nixos";
         fsType = "btrfs";
       };
-      "/home" = { 
-        device = "/dev/disk/by-label/home";
-        fsType = "btrfs";
-      };
       "/boot" = { 
         device = "/dev/disk/by-label/boot";
         fsType = "vfat";
       };
 
       "/data" = {
-        device = "192.168.1.2:/data";
-        fsType = "nfs";
+        device = "/dev/disk/by-label/data";
+        fsType = "btrfs";
       };
   };
 
