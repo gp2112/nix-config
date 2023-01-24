@@ -5,7 +5,7 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
   boot.initrd = {
-      availableKernelModules = [ "ahci" "xhci_pci" "sd_mod" ];
+      availableKernelModules = [ "ahci" "xhci_pci" "sd_mod" "nvme" ];
       kernelModules = [ "amdgpu" ];
   };
 
@@ -25,7 +25,6 @@
     ];
 
     driSupport = true;
-    # For 32 bit applications
     driSupport32Bit = true;
   };
  
