@@ -114,11 +114,11 @@
     },
     "nixpkgs-master": {
       "locked": {
-        "lastModified": 1676561811,
-        "narHash": "sha256-FlEsUr3mr+PG3QTqJXiUtZMI1o/0Y20b6dgBBf8T6uY=",
+        "lastModified": 1676568078,
+        "narHash": "sha256-FuYXKZu7Xv271kuL8L62/8kXP3gemOGhV3YFfACoXTc=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "02277dbde14a58a8fbb9f8740b24a76c917bcbf2",
+        "rev": "ed1b2ec2d48ee80efee2191186e7cceceb8dac78",
         "type": "github"
       },
       "original": {
@@ -144,26 +144,6 @@
         "type": "github"
       }
     },
-    "querolerbot": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1662990260,
-        "narHash": "sha256-ozRUP7S5Ai6xfaVO3f3WWCwVWIRoz/oQkZxdaGEClVk=",
-        "owner": "gp2112",
-        "repo": "querolerbot",
-        "rev": "f56c4116c98dfe775c64a6301058326e2ab73c24",
-        "type": "github"
-      },
-      "original": {
-        "owner": "gp2112",
-        "repo": "querolerbot",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -172,8 +152,7 @@
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs",
         "nixpkgs-master": "nixpkgs-master",
-        "nixpkgs-stable": "nixpkgs-stable",
-        "querolerbot": "querolerbot"
+        "nixpkgs-stable": "nixpkgs-stable"
       }
     },
     "utils": {

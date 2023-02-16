@@ -16,11 +16,9 @@
     hyprland.url = "github:hyprwm/Hyprland";
     hyprland.inputs.nixpkgs.follows = "nixpkgs";
 
-    querolerbot.url = "github:gp2112/querolerbot";
-    querolerbot.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, nixpkgs-stable, nixpkgs-master, home-manager, hyprland, flake-utils, querolerbot, ... }@inputs:
+  outputs = { nixpkgs, nixpkgs-stable, nixpkgs-master, home-manager, hyprland, flake-utils, ... }@inputs:
     let
       inherit (builtins) attrValues;
       inherit (flake-utils.lib) eachDefaultSystemMap;
@@ -33,7 +31,6 @@
         default = import ./overlay;
         # Pacotes e modificações que o hyprland exporta
         hyprland = hyprland.overlays.default;
-        querolerbot = querolerbot.overlays.default;
       };
 
 
@@ -78,7 +75,6 @@
         rasp = nixpkgs-stable.lib.nixosSystem {
           modules = [
             ./hosts/rasp
-            querolerbot.nixosModules.default
           ];
           specialArgs = { inherit inputs; };
 
