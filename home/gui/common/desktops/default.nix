@@ -1,11 +1,8 @@
-{ pkgs, inputs, ... }:
+{ pkgs, pkgs-master, ... }:
 
 
 # Default packages for my desktop computers
 
-let
-  pkgs-master = inputs.nixpkgs-master.legacyPackages.x86_64-linux;
-in
 {
   imports = [
     ./services
