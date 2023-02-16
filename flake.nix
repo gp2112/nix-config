@@ -4,6 +4,7 @@
   inputs = {
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-master.url = "github:nixos/nixpkgs/master";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-22.11";
     nixos-hardware.url = "github:nixos/nixos-hardware/master";
 
@@ -19,7 +20,7 @@
     querolerbot.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, nixpkgs-stable, home-manager, hyprland, flake-utils, querolerbot, ... }@inputs:
+  outputs = { nixpkgs, nixpkgs-stable, nixpkgs-master, home-manager, hyprland, flake-utils, querolerbot, ... }@inputs:
     let
       inherit (builtins) attrValues;
       inherit (flake-utils.lib) eachDefaultSystemMap;
@@ -47,6 +48,14 @@
 
       packages-stable = eachDefaultSystemMap (system:
         import nixpkgs-stable {
+          inherit system;
+          overlays = attrValues overlays;
+          config.allowUnfree = true;
+        }
+      );
+
+      packages-master = eachDefaultSystemMap (system:
+        import nixpkgs-master {
           inherit system;
           overlays = attrValues overlays;
           config.allowUnfree = true;
@@ -93,7 +102,7 @@
           # Configuração
           modules = [ ./home/gui/slowdive ./modules/home-manager ];
           # Repassar nossos inputs, para permitir referenciar da config
-          extraSpecialArgs = { inherit inputs; };
+          extraSpecialArgs = { inherit inputs; pkgs-master = packages-master.x86_64-linux; };
           # Nossos pacotes
           pkgs = packages.x86_64-linux;
         };
@@ -106,7 +115,7 @@
 
         "gui@frostbyte" = homeManagerConfiguration {
           modules = [ ./home/gui/frostbyte ./modules/home-manager ];
-          extraSpecialArgs = { inherit inputs; };
+          extraSpecialArgs = { inherit inputs; pkgs-master = packages-master.x86_64-linux; };
           pkgs = packages.x86_64-linux;
         };
       };
