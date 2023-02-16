@@ -1,0 +1,22 @@
+keys:
+  # Users
+  - &users:
+    - &gui 43827E2886E5C34F38D577538C814D625FBD99D1
+  # Hosts
+  - &hosts:
+    - &slowdive age1zdm8eef09lfpa8s4ffla8ecp04yxeqk6gssar2s6pr4k9sw7x4kslad4mr
+
+creation_rules:
+  - path_regex: hosts/slowdive/secrets.ya?ml$
+    key_groups:
+    - age:
+      - *slowdive
+      pgp:
+      - *gui
+
+  - path_regex: hosts/common/secrets.ya?ml$
+    key_groups:
+    - age:
+      - *slowdive
+      pgp:
+      - *gui
