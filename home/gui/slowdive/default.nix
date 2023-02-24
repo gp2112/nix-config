@@ -9,6 +9,7 @@
 
   home.packages = with pkgs; [ 
     brightnessctl # screen brightness controll
+    xfce.thunar
   ];
 
 }
