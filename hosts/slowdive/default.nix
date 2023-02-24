@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, ... }:
+{ pkgs, cfg, ... }:
 
 {
   imports =
@@ -35,6 +35,19 @@
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
   virtualisation.virtualbox.host.enable = true;
+
+  programs.sway.enable = true;
+
+  services.xserver = {
+    enable = true;
+    displayManager = {
+      gdm = {
+        enable = true;
+        wayland = true;
+      };
+      sessionPackages = [ pkgs.sway ];
+    };
+  };
 
   # Enable sound.
   services.pipewire = {
