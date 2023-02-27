@@ -12,7 +12,7 @@ And a special thanks to [Misterio](https://github.com/Misterio77), for showing m
   * **CPU:** Intel Core I5-6500 @ 3.6 GHz
   * **GPU:** Sapphire ATI Radeon RX 480 4GB
   * **RAM:** 16 GB DDR4 (2x8GB)
-  * **Storage:** SSD 256GB Kingston + HDD 1TB Seagate SATA III 7200 rpm
+  * **Storage:** SSD 1TB + SSD 256GB Kingston + HDD 1TB Seagate SATA III 7200 rpm
   * **MOBO:** MSI Morthar Arctic B150M
   
 * Slowdive - The Laptop
