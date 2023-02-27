@@ -98,6 +98,7 @@ in {
         "${mod}+Shift+q" = "kill";
         "${mod}+Shift+c" = "reload";
         "${mod}+Shift+e" = "exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'";
+        "${mod}+Shift+f" = "exec thunar";
         # Move your focus around
          "${mod}+${left}" = "focus left";
          "${mod}+${down}" = "focus down";
