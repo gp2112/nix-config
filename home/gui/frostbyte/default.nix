@@ -5,7 +5,7 @@
     ../common/desktops
     ../common/desktops/games
     ../common/desktops/desktop-env/plasma
-    ./multimidia
+    ../common/desktops/multimidia
   ];
 
   home.packages = with pkgs; [

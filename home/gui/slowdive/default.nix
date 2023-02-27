@@ -3,6 +3,7 @@
 { imports = [ 
   ../common 
   ../common/desktops
+  ../common/desktops/multimidia
   ../common/desktops/services/kdeconnect.nix
   ./swayconf.nix
 ];
