@@ -16,7 +16,7 @@
     thunderbird
     tdesktop
     element-desktop
-    qbittorrent
+    pkgs-master.qbittorrent
     vlc
     keepassxc
     discord
@@ -24,7 +24,6 @@
     chromium
     sonixd
     evince
-    #spotify
     pulseaudio
     ffmpeg
     libreoffice
