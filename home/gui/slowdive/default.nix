@@ -13,7 +13,7 @@
     xfce.thunar
     gnome.eog
     pantheon.elementary-calculator
-    gnome.gnome-calendar
+    calcurse
   ];
 
 }
