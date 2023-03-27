@@ -2,6 +2,7 @@
 
 
 {
+  programs.fish.enable = true;
   users = {
     mutableUsers = false;
 
