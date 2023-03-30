@@ -9,7 +9,7 @@
       enable = true;
     };
 
-    # displayManager.sddm.enable = true;
+    displayManager.sddm.enable = true;
 
     layout = "br";
 
