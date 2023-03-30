@@ -14,10 +14,4 @@
     libsForQt5.kcalc
   ];
 
-  programs.fish.shellInit = ''
-    if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ];
-      exec startplasma-wayland
-    end
-  '';
-
 }

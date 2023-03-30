@@ -3,7 +3,7 @@
 {
 
   services.xserver = {
-    enable = false;
+    enable = true;
 
     desktopManager.plasma5 = {
       enable = true;
