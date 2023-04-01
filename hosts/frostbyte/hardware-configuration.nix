@@ -13,6 +13,8 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.enable = true;
 
+  hardware.cpu.intel.updateMicrocode = true;
+
   hardware.opengl = {
     enable = true;
     extraPackages = with pkgs; [
