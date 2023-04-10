@@ -15,7 +15,7 @@
     hostName = "frostbyte"; # Define your hostname.
     nameservers = [ "8.8.8.8" "8.8.4.4" ];
 
-    interfaces.enp2s0.wakeOnLan.enable = true;
+    interfaces.enp4s0.wakeOnLan.enable = true;
 
   };
 
