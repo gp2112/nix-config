@@ -10,7 +10,7 @@ And a special thanks to [Misterio](https://github.com/Misterio77), for showing m
 
 * Frostbyte - The gaming PC
   * **CPU:** Intel Core I5-6500 @ 3.6 GHz
-  * **GPU:** Sapphire ATI Radeon RX 480 4GB
+  * **GPU:** AMD Radeon RX 6650 XT 8GB
   * **RAM:** 16 GB DDR4 (2x8GB)
   * **Storage:** SSD 1TB + SSD 256GB Kingston + HDD 1TB Seagate SATA III 7200 rpm
   * **MOBO:** MSI Morthar Arctic B150M
