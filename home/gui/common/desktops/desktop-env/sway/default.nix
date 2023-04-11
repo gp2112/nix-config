@@ -15,6 +15,7 @@ in {
         sirula
         sway-contrib.grimshot
         swaylock-effects
+        swayimg
         autotiling
   ];
 

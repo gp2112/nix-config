@@ -38,14 +38,13 @@
 
   programs.sway.enable = true;
 
-  services.xserver = {
+  services.greetd = {
     enable = true;
-    displayManager = {
-      gdm = {
-        enable = true;
-        wayland = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.greetd}/bin/agreety --cmd sway";
+        user = "gui";
       };
-      sessionPackages = [ pkgs.sway ];
     };
   };
 
