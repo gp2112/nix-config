@@ -17,8 +17,6 @@
 
   hardware.opengl = {
     enable = true;
-    mesaPackage = pkgs.mesa_23;
-    mesaPackage32 = pkgs.pkgsi686Linux.mesa_23;
     extraPackages = with pkgs; [
       rocm-opencl-icd
       rocm-opencl-runtime
