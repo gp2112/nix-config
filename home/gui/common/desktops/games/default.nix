@@ -9,7 +9,6 @@
     steam
     wine-staging
     lutris
-    gamemode
   ];
 
 
