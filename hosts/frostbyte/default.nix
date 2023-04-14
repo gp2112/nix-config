@@ -24,6 +24,11 @@
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+  };
+
   console.keyMap = "br-abnt";
 
   programs.xwayland.enable = true;
