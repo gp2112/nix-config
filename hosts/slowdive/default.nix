@@ -38,16 +38,6 @@
 
   programs.sway.enable = true;
 
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.greetd.greetd}/bin/agreety --cmd sway";
-        user = "gui";
-      };
-    };
-  };
-
   # Enable sound.
   services.pipewire = {
     enable = true;
