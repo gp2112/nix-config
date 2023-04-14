@@ -21,7 +21,7 @@
     };
   };
 
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_2;
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
   console.keyMap = "br-abnt";
