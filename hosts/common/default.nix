@@ -28,14 +28,6 @@
 
   environment.enableAllTerminfo = true;
 
-  services.openssh = {
-    enable = true;
-    settings = {
-      PermitRootLogin = "no";
-      PasswordAuthentication = false;
-    };
-  };
-
   programs.ssh.extraConfig = ''
       Host rasp
         HostName home.guip.dev

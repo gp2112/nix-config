@@ -26,6 +26,13 @@
       device = "/dev/disk/by-uuid/7d26b07e-fa28-476e-9445-4a9b18a39452";
     };
   };
+
+  services.openssh = {
+    enable = true;
+    permitRootLogin = "no";
+    passwordAuthentication = false;
+  };
+
   networking = {
     hostName = "rasp";
     useDHCP = false;
