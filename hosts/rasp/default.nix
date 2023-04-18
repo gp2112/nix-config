@@ -14,6 +14,7 @@
         # ./wireguard.nix
         ./nextcloud
         ./nfs.nix
+        ./monero.nix
 	];
 
   fileSystems = {
