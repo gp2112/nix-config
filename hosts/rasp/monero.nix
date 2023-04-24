@@ -1,8 +1,10 @@
 { pkgs, ... }:
 
 let
-  port = 18081;
-  
+  ports = {
+    rpc = 18081;
+    p2p = 18080;
+  };
 in
 {
   services.monero = {
@@ -10,10 +12,10 @@ in
     dataDir = "/data/monero";
     rpc = {
       address = "127.0.0.1";
-      inherit port;
+      port = ports.rpc;
     };
   };
 
-  # networking.firewall.allowedTCPPorts = [ port ];
+  networking.firewall.allowedTCPPorts = [ ports.rpc ports.p2p ];
 
 }
