@@ -10,7 +10,8 @@
     tree curl
     htop python3
     gcc nettools
-    lfs
+    lfs man-pages
+    manix
   ];
 
   home.stateVersion = "22.11";
