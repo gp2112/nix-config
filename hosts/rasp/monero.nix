@@ -7,6 +7,9 @@ let
   };
 in
 {
+
+  environment.systemPackages = with pkgs; [ monero-cli ];
+
   services.monero = {
     enable = true;
     dataDir = "/data/monero";
