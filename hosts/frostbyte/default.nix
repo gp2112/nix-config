@@ -36,6 +36,7 @@
   security.polkit.enable = true;
 
   virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "gui" ];
 
   services = {
     dbus.enable = true;
