@@ -5,6 +5,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../common
+      ../common/tor.nix
       ./audio.nix
       ./plasma.nix
       ./services
