@@ -50,6 +50,11 @@
         device = "/dev/disk/by-label/data";
         fsType = "btrfs";
       };
+
+      "/data2" = {
+        device = "/dev/disk/by-label/ssd2";
+        fsType = "btrfs";
+      };
   };
 
   swapDevices = [
