@@ -14,11 +14,9 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     hyprland.url = "github:hyprwm/Hyprland";
-    hyprland.inputs.nixpkgs.follows = "nixpkgs";
-
   };
 
-  outputs = { nixpkgs, nixpkgs-stable, nixpkgs-master, home-manager, hyprland, flake-utils, ... }@inputs:
+  outputs = { nixpkgs, nixpkgs-stable, nixpkgs-master, home-manager, flake-utils, ... }@inputs:
     let
       inherit (builtins) attrValues;
       inherit (flake-utils.lib) eachDefaultSystemMap;
@@ -30,7 +28,6 @@
         # Nossas modificações
         default = import ./overlay;
         # Pacotes e modificações que o hyprland exporta
-        hyprland = hyprland.overlays.default;
       };
 
 

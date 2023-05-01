@@ -1,11 +1,12 @@
 { config, pkgs, ... }:
 
 { imports = [ 
-  ../common 
+  ../common
   ../common/desktops
   ../common/desktops/multimidia
   ../common/desktops/services/kdeconnect.nix
   ./swayconf.nix
+  ../common/desktops/desktop-env/hyprland
 ];
 
   home.packages = with pkgs; [
