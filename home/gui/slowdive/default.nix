@@ -5,7 +5,7 @@
   ../common/desktops
   ../common/desktops/multimidia
   ../common/desktops/services/kdeconnect.nix
-  ./swayconf.nix
+  # ./swayconf.nix
   ../common/desktops/desktop-env/hyprland
 ];
 
