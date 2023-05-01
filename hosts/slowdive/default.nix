@@ -31,7 +31,7 @@
     };
   };
 
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_2;
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_3;
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
   virtualisation.virtualbox.host.enable = true;
