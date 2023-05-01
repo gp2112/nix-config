@@ -1,19 +1,40 @@
-{ config, ... }:
+{ config, lib, ... }:
 
 {
 
-  imports = [  ];
+  imports = [ ./style.nix ];
 
   programs.waybar = {
     enable = true;
     settings = {
+      bottom = {
+        mode = "dock";
+        layer = "bottom";
+        height = 32;
+        width = 100;
+        margin = "6";
+        position = "bottom";
+        modules-center = (lib.optionals config.wayland.windowManager.sway.enable [
+          "sway/workspaces"
+          "sway/mode"
+        ]) ++ (lib.optionals config.wayland.windowManager.hyprland.enable [
+          "wlr/workspaces"
+        ]);
 
+        "wlr/workspaces" = {
+          on-click = "activate";
+        };
+      };
       topBar = {
         layer = "top";
         position = "top";
         height = 30;
         spacing = 7;
-        modules-left = [ "sway/mode" "wlr/taskbar" ];
+        modules-left = (lib.optionals config.wayland.windowManager.sway.enable [
+          "sway/mode"
+        ]) ++ (lib.optionals config.wayland.windowManager.hyprland.enable [
+          "wlr/taskbar"
+        ]);
         modules-center = [ "clock" ];
 
         clock = {
@@ -69,19 +90,6 @@
 
       };
 
-      bottomBar = {
-        layer = "bottom";
-        position = "bottom";
-        height = 40;
-        width = 400;
-        modules-left = [ "sway/window" ];
-        modules-center = [ "wlr/workspaces" ];
-
-        "sway/workspaces" = {
-          format = "  {index}  ";
-        };
-
-      };
     };
   };
 }
