@@ -10,6 +10,7 @@
     gnome.zenity
     dolphin
     xdragon
+    kitty
   ];
 
   wayland.windowManager.hyprland = 
@@ -69,7 +70,7 @@
       }
 
       dwindle {
-        split_width_multiplier=1.35
+        split_width_multiplier=1
       }
 
       misc {
@@ -104,7 +105,7 @@
       bind=SUPER,Return,exec,${TERMINAL}
       bind=SUPER,w,exec,makoctl dismiss
       bind=SUPER,v,exec,${TERMINAL} $SHELL -ic ${EDITOR}
-      bind=SUPER,b,exec,${BROWSER}
+      bind=SUPER,SHIFT,w,exec,${BROWSER}
 
       bind=SUPER,x,exec,wofi -S drun -x 10 -y 10 -W 25% -H 60%
       bind=SUPER,d,exec,wofi -S run
