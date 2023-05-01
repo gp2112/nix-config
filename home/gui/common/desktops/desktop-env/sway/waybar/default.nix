@@ -2,7 +2,7 @@
 
 {
 
-  imports = [ ./style.nix ];
+  imports = [  ];
 
   programs.waybar = {
     enable = true;
@@ -75,7 +75,7 @@
         height = 40;
         width = 400;
         modules-left = [ "sway/window" ];
-        modules-center = [ "sway/workspaces" ];
+        modules-center = [ "wlr/workspaces" ];
 
         "sway/workspaces" = {
           format = "  {index}  ";

@@ -1,19 +1,23 @@
 { pkgs, inputs, ... }:
 
 {
-  imports = [ ../../wayland ./waybar];
+  imports = [
+    ../../wayland
+    ../sway/waybar
+    ../../terminal-emulator/kitty
+  ];
 
   home.packages = with pkgs;[
     swaybg
+    sirula
     wofi
     swaylock-effects
-    gnome.zenity
-    dolphin
+    sway-contrib.grimshot
     xdragon
-    kitty
+    swayimg
   ];
 
-  wayland.windowManager.hyprland = 
+  wayland.windowManager.hyprland =
 
   let
     TERMINAL = "kitty";
@@ -25,11 +29,13 @@
     package = inputs.hyprland.packages.${pkgs.system}.default;
     extraConfig = ''
       general {
-        gaps_in=15
+        gaps_in=7
         gaps_out=20
         border_size=2.7
         cursor_inactive_timeout=4
       }
+
+      monitor=eDP-1, 1920x1080, 0x0, 1
 
       decoration {
         active_opacity=0.94
@@ -78,7 +84,7 @@
       }
 
       input {
-        kb_layout=br,us
+        kb_layout=us(intl)
         touchpad {
           disable_while_typing=false
         }
@@ -105,10 +111,9 @@
       bind=SUPER,Return,exec,${TERMINAL}
       bind=SUPER,w,exec,makoctl dismiss
       bind=SUPER,v,exec,${TERMINAL} $SHELL -ic ${EDITOR}
-      bind=SUPER,SHIFT,w,exec,${BROWSER}
+      bind=SUPER_SHIFT,w,exec,${BROWSER}
 
-      bind=SUPER,x,exec,wofi -S drun -x 10 -y 10 -W 25% -H 60%
-      bind=SUPER,d,exec,wofi -S run
+      bind=SUPER,d,exec,sirula
       bind=,Scroll_Lock,exec,pass-wofi # fn+k
       bind=,XF86Calculator,exec,pass-wofi # fn+f12
 
