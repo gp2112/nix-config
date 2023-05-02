@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 {
 
@@ -6,6 +6,11 @@
 
   programs.waybar = {
     enable = true;
+
+    package = pkgs.waybar.overrideAttrs (oa: {
+      mesonFlags = (oa.mesonFlags or  [ ]) ++ [ "-Dexperimental=true" ];
+    });
+
     settings = {
       bottom = {
         mode = "dock";
@@ -36,6 +41,8 @@
           "wlr/taskbar"
         ]);
         modules-center = [ "clock" ];
+
+        modules-right = [ "pulseaudio" "network" "memory" "backlight" "bluetooth" "temperature" "battery" ];
 
         clock = {
           format = "{:%H:%M %A %d/%m/%Y}";

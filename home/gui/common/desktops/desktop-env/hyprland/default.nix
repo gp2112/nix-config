@@ -38,12 +38,12 @@
       monitor=eDP-1, 1920x1080, 0x0, 1
 
       decoration {
-        active_opacity=0.94
-        inactive_opacity=0.84
+        active_opacity=0.9
+        inactive_opacity=0.83
         fullscreen_opacity=1.0
         rounding=5
         blur=true
-        blur_size=5
+        blur_size=1
         blur_passes=3
         blur_new_optimizations=true
         blur_ignore_opacity=true
@@ -126,11 +126,11 @@
       bind=SUPER,backspace,exec,swaylock -S
 
       # Screenshots
-      bind=,Print,exec,grimblast --notify copy output
-      bind=SHIFT,Print,exec,grimblast --notify copy active
-      bind=CONTROL,Print,exec,grimblast --notify copy screen
-      bind=SUPER,Print,exec,grimblast --notify copy window
-      bind=ALT,Print,exec,grimblast --notify copy area
+      bind=,Print,exec,grimshot --notify copy output
+      bind=SHIFT,Print,exec,grimshot --notify copy active
+      bind=CONTROL,Print,exec,grimshot --notify copy screen
+      bind=SUPER,Print,exec,grimshot --notify copy window
+      bind=ALT,p,exec,grimshot --notify copy area
 
       # Keyboard controls (brightness, media, sound, etc)
       bind=,XF86MonBrightnessUp,exec,brightnessctl set 5%+
@@ -189,18 +189,7 @@
       bind=SUPERSHIFT,k,movewindow,u
       bind=SUPERSHIFT,j,movewindow,d
 
-      bind=SUPERCONTROL,left,focusmonitor,l
-      bind=SUPERCONTROL,right,focusmonitor,r
-      bind=SUPERCONTROL,up,focusmonitor,u
-      bind=SUPERCONTROL,down,focusmonitor,d
-      bind=SUPERCONTROL,h,focusmonitor,l
-      bind=SUPERCONTROL,l,focusmonitor,r
-      bind=SUPERCONTROL,k,focusmonitor,u
-      bind=SUPERCONTROL,j,focusmonitor,d
-
       bind=SUPERCONTROL,1,focusmonitor,DP-1
-      bind=SUPERCONTROL,2,focusmonitor,DP-2
-      bind=SUPERCONTROL,3,focusmonitor,DP-3
 
       bind=SUPERCONTROLSHIFT,left,movewindow,mon:l
       bind=SUPERCONTROLSHIFT,right,movewindow,mon:r
