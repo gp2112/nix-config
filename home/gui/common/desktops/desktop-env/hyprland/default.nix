@@ -133,8 +133,8 @@
       bind=ALT,Print,exec,grimblast --notify copy area
 
       # Keyboard controls (brightness, media, sound, etc)
-      bind=,XF86MonBrightnessUp,exec,light -A 10
-      bind=,XF86MonBrightnessDown,exec,light -U 10
+      bind=,XF86MonBrightnessUp,exec,brightnessctl set 5%+
+      bind=,XF86MonBrightnessDown,exec,brightnessctl set 5%-
 
       bind=,XF86AudioNext,exec,playerctl next
       bind=,XF86AudioPrev,exec,playerctl previous
