@@ -38,6 +38,7 @@
     arduino
     gparted
     spotify
+    gnome-decoder
 
     (pkgs.writeShellScriptBin "rasptunnel" ''
       ssh -D 8888 gui@home.guip.dev -p 2020
