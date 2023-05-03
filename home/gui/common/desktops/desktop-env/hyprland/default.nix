@@ -5,6 +5,7 @@
     ../../wayland
     ../sway/waybar
     ../../terminal-emulator/kitty
+    ./mako.nix
   ];
 
   home.packages = with pkgs;[
