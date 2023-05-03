@@ -184,12 +184,8 @@
       bind=SUPERSHIFT,right,movewindow,r
       bind=SUPERSHIFT,up,movewindow,u
       bind=SUPERSHIFT,down,movewindow,d
-      bind=SUPERSHIFT,h,movewindow,l
-      bind=SUPERSHIFT,l,movewindow,r
-      bind=SUPERSHIFT,k,movewindow,u
-      bind=SUPERSHIFT,j,movewindow,d
 
-      bind=SUPERCONTROL,1,focusmonitor,DP-1
+      bind=SUPERSHIFT,l,exec,swaylock -S  -k --effect-blur 5x5
 
       bind=SUPERCONTROLSHIFT,left,movewindow,mon:l
       bind=SUPERCONTROLSHIFT,right,movewindow,mon:r
