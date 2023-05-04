@@ -39,6 +39,7 @@
     gparted
     spotify
     gnome-decoder
+    signal-desktop
 
     (pkgs.writeShellScriptBin "rasptunnel" ''
       ssh -D 8888 gui@home.guip.dev -p 2020
