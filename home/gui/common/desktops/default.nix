@@ -21,7 +21,7 @@
     keepassxc
     discord
     firefox
-    chromium
+    ungoogled-chromium
     sonixd
     evince
     pulseaudio
