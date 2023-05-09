@@ -32,7 +32,8 @@
     neofetch
     img-cat
     playerctl
-    marktext
+    ghostwriter
+    texlive.combined.scheme-tetex
     gummi
     tor-browser-bundle-bin
     arduino
