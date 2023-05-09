@@ -22,7 +22,7 @@
     };
   };
 
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_2;
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
   nix.gc = {
