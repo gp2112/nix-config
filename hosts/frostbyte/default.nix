@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
       ../common
       ../common/tor.nix
+      ../common/virtualisation.nix
       ./audio.nix
       ./plasma.nix
       ./services
@@ -22,7 +23,7 @@
     };
   };
 
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_2;
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
   nix.gc = {
@@ -34,9 +35,6 @@
 
   programs.xwayland.enable = true;
   security.polkit.enable = true;
-
-  virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "gui" ];
 
   services = {
     dbus.enable = true;
