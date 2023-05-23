@@ -14,9 +14,12 @@ in
     enable = true;
     dataDir = "/data/monero";
     rpc = {
-      address = "127.0.0.1";
+      address = "0.0.0.0";
       port = ports.rpc;
     };
+    extraConfig = ''
+      confirm-external-bind=1
+    '';
   };
 
   networking.firewall.allowedTCPPorts = [ ports.rpc ports.p2p ];
