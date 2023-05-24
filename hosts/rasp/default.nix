@@ -11,7 +11,6 @@
 	    ./deluge.nix
 	    ./nginx
         ./git
-        # ./wireguard.nix
         ./nextcloud
         ./nfs.nix
         ./monero.nix
@@ -26,12 +25,6 @@
     "/data" = {
       device = "/dev/disk/by-uuid/7d26b07e-fa28-476e-9445-4a9b18a39452";
     };
-  };
-
-  services.openssh = {
-    enable = true;
-    permitRootLogin = "no";
-    passwordAuthentication = false;
   };
 
   networking = {
@@ -57,8 +50,6 @@
 
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 22 ];
-      allowedUDPPorts = [  ];
     };
 
   };
@@ -66,10 +57,10 @@
     environment.systemPackages = with pkgs; [ nmap wakelan ];
 
     # Enable GPU acceleration
-    hardware.raspberry-pi."4".fkms-3d.enable = true;
-    hardware.raspberry-pi."4".i2c1.enable = true;
-   #  nixpkgs-stable.hostPlatform.system = "aarch64-linux";
+    #hardware.raspberry-pi."4".fkms-3d.enable = true;
+    #hardware.raspberry-pi."4".i2c1.enable = true;
+    nixpkgs.hostPlatform.system = "aarch64-linux";
     powerManagement.cpuFreqGovernor = "ondemand";
 
-    system.stateVersion = "22.05";
+    system.stateVersion = "22.11";
   }
