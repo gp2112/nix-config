@@ -14,6 +14,7 @@
         MusicFolder = "/data/Music";
         CoverArtPriority = "cover.*, embedded, front.*, folder.*";
         EnableStarRating = false;
+        EnableSharing = true;
       };
     };
     nginx.virtualHosts."music.guip.dev" = {
