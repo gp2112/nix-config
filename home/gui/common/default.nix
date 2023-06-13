@@ -11,7 +11,7 @@
     htop python3
     gcc nettools
     lfs man-pages
-    manix
+    manix nix-tree
   ];
 
   home.stateVersion = "22.11";
