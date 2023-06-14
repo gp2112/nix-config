@@ -12,6 +12,7 @@
     gcc nettools
     lfs man-pages
     manix nix-tree
+    nvd
   ];
 
   home.stateVersion = "22.11";
