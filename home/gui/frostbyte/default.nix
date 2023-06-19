@@ -12,6 +12,7 @@
     monero-gui
     qt6.qtwebsockets
     libsForQt5.kcalc
+    stremio
   ];
 
 }
