@@ -26,6 +26,8 @@
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_3;
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
+  programs.adb.enable = true;
+
   nix.gc = {
     automatic = true;
     dates = "weekly";
