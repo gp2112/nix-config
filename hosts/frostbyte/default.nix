@@ -7,8 +7,8 @@
       ../common
       ../common/tor.nix
       ../common/virtualisation.nix
+      ../common/plasma.nix
       ./audio.nix
-      ./plasma.nix
       ./services
     ];
 
