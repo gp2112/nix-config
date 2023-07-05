@@ -5,6 +5,7 @@
     ./hardware.nix
     ../common
     ../common/plasma.nix
+    ../common/docker.nix
   ];
 
   networking = {
