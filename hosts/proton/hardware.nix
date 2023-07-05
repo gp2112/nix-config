@@ -18,4 +18,27 @@
   };
 
   hardware.cpu.intel.updateMicrocode = true;
+
+  fileSystems = {
+      "/" = {
+        device = "/dev/disk/by-label/nixos";
+        fsType = "btrfs";
+      };
+      "/boot" = {
+        device = "/dev/disk/by-label/boot";
+        fsType = "vfat";
+      };
+
+      "/data" = {
+        device = "/dev/disk/by-label/data";
+        fsType = "btrfs";
+      };
+  };
+
+  swapDevices = [
+    { device = "/dev/disk/by-label/swap"; }
+  ];
+
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+
 }
