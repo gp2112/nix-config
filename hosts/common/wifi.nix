@@ -43,6 +43,10 @@
         priority = 2;
       };
 
+      "Wi-Fi Santa Casa" = {
+        priority = 10;
+      };
+
       eduroam = {
         auth = ''
           key_mgmt=WPA-EAP
