@@ -21,6 +21,8 @@ And a special thanks to [Misterio](https://github.com/Misterio77), for showing m
   * **RAM:** 8GB LPDDR3 (1x8GB)
   * **Storage:** 256GB SSD
 
+* Proton - My Work's PC
+
 * Rasp - My Homeserver :v
   * Just a Raspberry PI
   * **Model:** 4
