@@ -88,6 +88,16 @@
           system = "x86_64-linux";
 
         };
+        proton = nixpkgs.lib.nixosSystem {
+          modules = [
+            ./hosts/proton
+          ];
+          specialArgs = { inherit inputs; };
+
+          pkgs = packages.x86_64-linux;
+          system = "x86_64-linux";
+
+        };
       };
 
       homeConfigurations = {
@@ -111,6 +121,16 @@
           extraSpecialArgs = { inherit inputs; pkgs-master = packages-master.x86_64-linux; };
           pkgs = packages.x86_64-linux;
         };
+
+        "gui@proton" = homeManagerConfiguration {
+          # Configuração
+          modules = [ ./home/gui/proton ./modules/home-manager ];
+          # Repassar nossos inputs, para permitir referenciar da config
+          extraSpecialArgs = { inherit inputs; pkgs-master = packages-master.x86_64-linux; };
+          # Nossos pacotes
+          pkgs = packages.x86_64-linux;
+        };
+
       };
     };
 }
