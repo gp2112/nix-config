@@ -10,6 +10,8 @@
 
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_4;
 
+  console.keyMap = "br-abnt";
+
   networking = {
     hostname = "proton";
 
