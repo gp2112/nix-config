@@ -34,14 +34,14 @@
     driSupport = true;
     driSupport32Bit = true;
   };
- 
+
 
   fileSystems = {
-      "/" = { 
+      "/" = {
         device = "/dev/disk/by-label/nixos";
         fsType = "btrfs";
       };
-      "/boot" = { 
+      "/boot" = {
         device = "/dev/disk/by-label/boot";
         fsType = "vfat";
       };
