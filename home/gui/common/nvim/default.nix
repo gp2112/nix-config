@@ -46,6 +46,8 @@
     nvim-autopairs
   ];
 
+  defaultEditor = true;
+
  };
 
 }
