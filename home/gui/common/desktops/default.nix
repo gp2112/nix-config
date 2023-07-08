@@ -16,7 +16,7 @@
     thunderbird
     tdesktop
     element-desktop
-    pkgs-master.qbittorrent
+    qbittorrent
     vlc
     keepassxc
     discord
