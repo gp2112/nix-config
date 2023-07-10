@@ -9,7 +9,7 @@
   home.packages = with pkgs; [
     libsForQt5.kcalc
     mysql-workbench
-    php
+    php mysql80
   ];
 
 }
