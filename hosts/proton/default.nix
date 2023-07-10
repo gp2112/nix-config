@@ -1,5 +1,12 @@
 { pkgs, ... }:
 
+let
+  ip = "143.107.231.209";
+  defaultGateway = "143.107.231.193";
+  dns = "143.107.231.12";
+  prefix = 26;
+  interface = "eno1";
+in
 {
   imports = [
     ./hardware.nix
@@ -15,19 +22,14 @@
   networking = {
     hostName = "proton";
 
-    nameservers = [ "143.107.231.12" ];
+    nameservers = [ dns ];
 
-
-    interfaces = {
-      eno1 = {
-        useDHCP = false;
-      };
-    };
+    interfaces.${interface}.useDHCP = false;
 
     localCommands = ''
-      ip address add 143.107.231.209/26 brd + dev eno1
-      ip route add 143.107.231.193 dev eno1
-      ip route add default via 143.107.231.193 dev eno1
+      ip address add ${ip}/${toString prefix} brd + dev ${interface}
+      ip route add ${defaultGateway} dev ${interface}
+      ip route add default via ${defaultGateway} dev ${interface}
     '';
 
   };
