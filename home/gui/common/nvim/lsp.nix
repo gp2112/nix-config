@@ -10,7 +10,7 @@ in
     clang-tools
     rnix-lsp
     statix
-    deadnix
+    deadnix proselint
   ];
 
   programs.neovim.plugins = with pkgs.vimPlugins; [
@@ -35,7 +35,7 @@ in
           lspconfig.clangd.setup{} -- C/C++
           lspconfig.rnix.setup{} -- Nix
           lspconfig.pylsp.setup{} -- Python
-          lspconfig.sumneko_lua.setup{cmd = {"lua-language-server"}} -- Lua
+          lspconfig.lua_ls.setup{cmd = {"lua-language-server"}} -- Lua
           lspconfig.dartls.setup{} -- Dart
           lspconfig.hls.setup{} -- Haskell
           lspconfig.kotlin_language_server.setup{} -- Kotlin
@@ -76,7 +76,6 @@ in
                   -- HTML & templates
                   null_ls.builtins.diagnostics.curlylint,
                   -- Markdown
-                  null_ls.builtins.diagnostics.markdownlint,
                   null_ls.builtins.formatting.mdformat,
                   -- SQL
                   null_ls.builtins.diagnostics.sqlfluff,
