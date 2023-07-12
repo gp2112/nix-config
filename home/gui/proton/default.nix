@@ -8,7 +8,7 @@
 
   home.packages = with pkgs; [
     libsForQt5.kcalc
-    mysql-workbench
+    dbeaver
     php mysql80 phpactor
   ];
 
