@@ -28,6 +28,25 @@
       ssh -D 8888 gui@home.guip.dev -p 2020
     '')
 
+    (pkgs.writeScriptBin "json-pretify" ''
+      #!${pkgs.python3}/bin/python
+      import json
+      import sys
+
+      def main():
+          try:
+              fname = sys.argv[1]
+              f = open(fname)
+          except IndexError:
+              f = sys.stdin
+          
+          data = json.load(f)
+          print(json.dumps(data, indent=4))
+
+      if __name__ == '__main__':
+          main()
+    '')
+
   ];
 
 }
