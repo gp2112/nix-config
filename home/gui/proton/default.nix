@@ -2,7 +2,7 @@
 
 { imports = [
     ../common
-    ../common/desktops
+    ../common/desktops/minimum.nix
     ../common/desktops/desktop-env/plasma
   ];
 
