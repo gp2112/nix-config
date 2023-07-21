@@ -3,6 +3,6 @@
 {
   imports = [
     # List your module files here
-    ./hyprland.nix
+    # ./hyprland.nix
   ];
 }

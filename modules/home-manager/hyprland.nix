@@ -13,7 +13,7 @@ in
       type = lib.types.bool;
       default = pkgs.stdenv.isLinux;
     };
-    xwayland = lib.mkOption {
+    xwayland.enable = lib.mkOption {
       type = lib.types.bool;
       default = true;
     };
