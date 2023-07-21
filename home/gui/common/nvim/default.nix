@@ -44,7 +44,7 @@
     vim-surround
     nerdtree
     nvim-autopairs
-    fugitive
+    fugitive vim-gnupg
   ];
 
   defaultEditor = true;
