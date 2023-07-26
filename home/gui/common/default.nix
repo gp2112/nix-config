@@ -9,6 +9,7 @@
   home.packages = with pkgs; [
     tree curl
     htop python311
+    python311Packages.pip
     gcc nettools
     lfs man-pages
     manix nix-tree
