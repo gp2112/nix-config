@@ -30,7 +30,7 @@
         set ttyfast
         set spell
         set noswapfile
-        colorscheme terafox
+        colors deus
         set conceallevel=2
         map <C-n> :NERDTreeToggle<CR>
         '';
@@ -39,12 +39,12 @@
   vimAlias = true;
 
   plugins = with pkgs.vimPlugins; [
-    nightfox-nvim
     nerdcommenter
     vim-surround
     nerdtree
     nvim-autopairs
     fugitive vim-gnupg
+    vim-deus
   ];
 
   defaultEditor = true;
