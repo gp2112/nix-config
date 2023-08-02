@@ -44,7 +44,8 @@
     nerdtree
     nvim-autopairs
     fugitive vim-gnupg
-    vim-deus
+    vim-deus nvim-ufo
+    zen-mode-nvim
   ];
 
   defaultEditor = true;
