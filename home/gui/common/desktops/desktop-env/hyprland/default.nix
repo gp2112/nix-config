@@ -10,8 +10,7 @@
 
   home.packages = with pkgs;[
     swaybg
-    sirula
-    wofi
+    rofi-wayland
     swaylock-effects
     sway-contrib.grimshot
     xdragon
@@ -43,11 +42,13 @@
         inactive_opacity=0.83
         fullscreen_opacity=1.0
         rounding=5
-        blur=true
-        blur_size=1
-        blur_passes=3
-        blur_new_optimizations=true
-        blur_ignore_opacity=true
+        blur {
+          enabled=true
+          size=1
+          passes=3
+          new_optimizations=true
+          ignore_opacity=true
+        }
         drop_shadow=true
         shadow_range=12
         shadow_offset=3 3
@@ -114,7 +115,7 @@
       bind=SUPER,v,exec,${TERMINAL} $SHELL -ic ${EDITOR}
       bind=SUPER_SHIFT,w,exec,${BROWSER}
 
-      bind=SUPER,d,exec,sirula
+      bind=SUPER,d,exec,rofi -show drun
       bind=,Scroll_Lock,exec,pass-wofi # fn+k
       bind=,XF86Calculator,exec,pass-wofi # fn+f12
 
