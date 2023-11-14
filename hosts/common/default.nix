@@ -22,7 +22,7 @@
 
   time.timeZone = "America/Sao_Paulo";
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraCode" "CascadiaCode" ]; })
   ];
 

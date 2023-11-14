@@ -66,7 +66,6 @@
           # Repassar nossos inputs, para permitir referenciar da config
           specialArgs = { inherit inputs; };
           # Nossos pacotes
-          pkgs = packages.x86_64-linux;
           system = "x86_64-linux";
         };
         rasp = nixpkgs-stable.lib.nixosSystem {
@@ -75,7 +74,6 @@
           ];
           specialArgs = { inherit inputs; };
 
-          pkgs = packages-stable.aarch64-linux;
           system = "aarch64-linux";
         };
         frostbyte = nixpkgs.lib.nixosSystem {
@@ -84,7 +82,6 @@
           ];
           specialArgs = { inherit inputs; };
 
-          pkgs = packages.x86_64-linux;
           system = "x86_64-linux";
 
         };

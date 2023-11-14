@@ -14,5 +14,5 @@
     jack.enable = true;
   };
 
-  environment.systemPackages = with pkgs; [ libjack2 jack2 qjackctl jack_capture ];
+  environment.systemPackages = with pkgs; [ libjack2 jack2 qjackctl ];
 }
