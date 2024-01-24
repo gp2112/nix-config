@@ -39,7 +39,10 @@
   security.polkit.enable = true;
 
   services = {
-    dbus.enable = true;
+    dbus = {
+      enable = true;
+      packages = [ pkgs.gcr ];
+    };
   };
 
   # Enable the OpenSSH daemon.
